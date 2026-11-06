@@ -1,0 +1,235 @@
+/* ==========================================================================
+   Top Government Information Bar Styles (Pure CSS)
+   Godavari GeoSeva 2027 - Official Government Portal Header
+   ========================================================================== */
+
+:root {
+  --primary-green: #006B57;
+  --dark-green: #004D43;
+  --aqua: #DFF5F1;
+  --light-bg: #F8FCFA;
+  --saffron: #F59E0B;
+  --navy-text: #15364A;
+  --white: #FFFFFF;
+}
+
+.top-gov-bar {
+  background: linear-gradient(90deg, #003831 0%, #004D43 50%, #003831 100%);
+  color: var(--white);
+  border-bottom: 1px solid rgba(223, 245, 241, 0.18);
+  font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 11px;
+  line-height: 1.4;
+  position: relative;
+  z-index: 50;
+  width: 100%;
+  max-height: 40px;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.25s ease,
+              padding 0.3s ease,
+              transform 0.3s ease;
+}
+
+.portal-master-header.is-scrolled .top-gov-bar {
+  max-height: 0;
+  opacity: 0;
+  padding: 0;
+  border-bottom-color: transparent;
+  pointer-events: none;
+  transform: translateY(-100%);
+}
+
+.top-gov-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 6px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+/* Left Section: AP Branding & Pushkaralu Calendar */
+.top-gov-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  flex-shrink: 1;
+}
+
+.gov-branding-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.2s ease;
+}
+
+.gov-branding-link:hover {
+  opacity: 0.92;
+}
+
+.gov-emblem-small {
+  height: 22px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.35));
+  flex-shrink: 0;
+}
+
+.gov-title-text {
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--white);
+  white-space: nowrap;
+}
+
+.gov-telugu-hint {
+  font-size: 10px;
+  color: rgba(223, 245, 241, 0.75);
+  font-weight: 500;
+  margin-left: 4px;
+}
+
+.gov-separator {
+  width: 1px;
+  height: 14px;
+  background: rgba(255, 255, 255, 0.25);
+  flex-shrink: 0;
+}
+
+.pushkaralu-calendar-tag {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--saffron);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+.pushkaralu-calendar-icon {
+  width: 13px;
+  height: 13px;
+  color: var(--saffron);
+  flex-shrink: 0;
+}
+
+/* Right Section: Location & Quick Language Selector */
+.top-gov-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.location-indicator {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--aqua);
+  font-size: 11px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.location-icon {
+  width: 13px;
+  height: 13px;
+  color: #34D399;
+  flex-shrink: 0;
+}
+
+.location-text {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.quick-lang-selector {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  background: rgba(0, 0, 0, 0.22);
+  padding: 2px 4px;
+  border-radius: 6px;
+  border: 1px solid rgba(223, 245, 241, 0.15);
+}
+
+.quick-lang-btn {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.75);
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  line-height: 1.3;
+}
+
+.quick-lang-btn:hover {
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.quick-lang-btn.active {
+  background: rgba(255, 255, 255, 0.22);
+  color: var(--white);
+  font-weight: 700;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  border-bottom: 2px solid var(--saffron);
+}
+
+/* Emergency Helpline Quick-Pill in Top Bar */
+.top-emergency-hotline {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #FCA5A5;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: rgba(220, 38, 38, 0.18);
+  border: 1px solid rgba(252, 165, 165, 0.25);
+  transition: all 0.2s ease;
+}
+
+.top-emergency-hotline:hover {
+  background: rgba(220, 38, 38, 0.3);
+  color: #FFFFFF;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .gov-telugu-hint {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-gov-container {
+    padding: 5px 12px;
+  }
+  .location-indicator {
+    display: none;
+  }
+  .gov-separator {
+    display: none;
+  }
+  .pushkaralu-calendar-tag {
+    display: none;
+  }
+  .top-emergency-hotline {
+    display: none;
+  }
+}
+

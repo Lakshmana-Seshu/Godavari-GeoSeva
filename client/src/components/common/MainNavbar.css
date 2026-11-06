@@ -1,0 +1,362 @@
+/* ==========================================================================
+   Main Floating Navigation Bar Styles (Pure CSS)
+   Godavari GeoSeva 2027 - Premium Government Floating Header
+   ========================================================================== */
+
+.main-navbar-wrapper {
+  padding: 10px 24px 14px 24px;
+  background: transparent;
+  position: relative;
+  z-index: 40;
+  width: 100%;
+  transition: padding 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.floating-navbar,
+.nav-link-pill,
+.dashboard-btn-prominent,
+.admin-profile-pill,
+.login-btn-prominent {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================================================
+   Shrink on Scroll: Floating Navigation Menu
+   ========================================================================== */
+.portal-master-header.is-scrolled .main-navbar-wrapper {
+  padding: 3px 24px 7px 24px;
+}
+
+.portal-master-header.is-scrolled .floating-navbar {
+  padding: 3px 8px;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 6px 18px -4px rgba(0, 77, 67, 0.12), 0 4px 6px -4px rgba(0, 77, 67, 0.04);
+  border-color: #B2E5DC;
+}
+
+.portal-master-header.is-scrolled .nav-link-pill {
+  padding: 5px 11px;
+  font-size: 12px;
+  gap: 5px;
+}
+
+.portal-master-header.is-scrolled .dashboard-btn-prominent {
+  padding: 5px 14px;
+  font-size: 12px;
+}
+
+.portal-master-header.is-scrolled .admin-profile-pill {
+  padding: 3px 10px;
+  font-size: 11px;
+}
+
+.portal-master-header.is-scrolled .login-btn-prominent {
+  padding: 5px 12px;
+  font-size: 12px;
+}
+
+.floating-navbar {
+  max-width: 1440px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  border: 1px solid #DFF5F1;
+  border-radius: 9999px;
+  box-shadow: 0 10px 25px -5px rgba(0, 77, 67, 0.08), 0 8px 10px -6px rgba(0, 77, 67, 0.04);
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+}
+
+.floating-navbar:hover {
+  box-shadow: 0 14px 30px -6px rgba(0, 77, 67, 0.12), 0 10px 14px -6px rgba(0, 77, 67, 0.06);
+  border-color: #B2E5DC;
+}
+
+/* Primary Navigation Items List */
+.nav-items-group {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: nowrap;
+}
+
+.nav-link-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 14px;
+  border-radius: 9999px;
+  font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #15364A;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  border: 1px solid transparent;
+  background: transparent;
+  cursor: pointer;
+}
+
+.nav-link-pill:hover {
+  background: rgba(223, 245, 241, 0.55);
+  color: #006B57;
+}
+
+/* Active State: Dark Green Gradient + Saffron Accent */
+.nav-link-pill.active {
+  background: linear-gradient(135deg, #004D43 0%, #006B57 100%);
+  color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(0, 77, 67, 0.22);
+}
+
+.nav-link-pill.active::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 20%;
+  right: 20%;
+  height: 2.5px;
+  background: #F59E0B;
+  border-radius: 99px;
+  box-shadow: 0 1px 3px rgba(245, 158, 11, 0.6);
+}
+
+.nav-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: #475569;
+  transition: color 0.2s ease;
+}
+
+.nav-link-pill:hover .nav-icon {
+  color: #006B57;
+}
+
+.nav-link-pill.active .nav-icon {
+  color: #F59E0B;
+}
+
+/* Pulsing Live Beacon for GIS Map */
+.map-live-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #10B981;
+  display: inline-block;
+  margin-left: 2px;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.35);
+  animation: livePulse 2s infinite;
+}
+
+@keyframes livePulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(16, 185, 129, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+/* Emergency Helpline Link Styling */
+.nav-link-pill.emergency-pill {
+  color: #DC2626;
+  border: 1px solid rgba(220, 38, 38, 0.25);
+  background: rgba(254, 242, 242, 0.5);
+}
+
+.nav-link-pill.emergency-pill .nav-icon {
+  color: #DC2626;
+}
+
+.nav-link-pill.emergency-pill:hover {
+  background: #FEE2E2;
+  border-color: #DC2626;
+  color: #B91C1C;
+}
+
+.nav-link-pill.emergency-pill.active {
+  background: linear-gradient(135deg, #991B1B 0%, #DC2626 100%);
+  color: #FFFFFF;
+  border-color: transparent;
+}
+
+.nav-link-pill.emergency-pill.active .nav-icon {
+  color: #FEE2E2;
+}
+
+/* Subtle Vertical Nav Separator */
+.nav-menu-separator {
+  width: 1px;
+  height: 22px;
+  background: #DFF5F1;
+  margin: 0 3px;
+  flex-shrink: 0;
+}
+
+/* Right Section: Language, Dashboard & Admin Profile */
+.nav-actions-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+/* Prominent Dark Green Dashboard Button */
+.dashboard-btn-prominent {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 18px;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #004D43 0%, #006B57 100%);
+  color: #FFFFFF;
+  font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 77, 67, 0.22);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dashboard-btn-prominent:hover {
+  background: linear-gradient(135deg, #003831 0%, #004D43 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0, 77, 67, 0.32);
+}
+
+.dashboard-btn-prominent .dashboard-icon {
+  width: 15px;
+  height: 15px;
+  color: #F59E0B;
+}
+
+/* Admin Profile Pill */
+.admin-profile-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 12px;
+  border-radius: 9999px;
+  background: #F8FCFA;
+  border: 1px solid #DFF5F1;
+  color: #15364A;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.admin-profile-pill:hover {
+  border-color: #006B57;
+  background: #FFFFFF;
+}
+
+.admin-avatar-icon {
+  width: 15px;
+  height: 15px;
+  color: #006B57;
+}
+
+.admin-tag-badge {
+  background: #FEF3C7;
+  color: #92400E;
+  border: 1px solid #F59E0B;
+  font-size: 9px;
+  font-weight: 800;
+  padding: 1px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+}
+
+.admin-signout-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  background: transparent;
+  color: #64748B;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.admin-signout-btn:hover {
+  background: #FEE2E2;
+  color: #DC2626;
+  border-color: #FECACA;
+}
+
+/* Official Login Button (when unauthenticated) */
+.login-btn-prominent {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  background: #15364A;
+  color: #FFFFFF;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid #1E293B;
+  box-shadow: 0 2px 6px rgba(21, 54, 74, 0.15);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.login-btn-prominent:hover {
+  background: #004D43;
+  border-color: #004D43;
+  box-shadow: 0 4px 10px rgba(0, 77, 67, 0.25);
+}
+
+.login-btn-prominent .login-icon {
+  width: 14px;
+  height: 14px;
+  color: #F59E0B;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .nav-link-pill {
+    padding: 7px 10px;
+    font-size: 12px;
+    gap: 5px;
+  }
+  .dashboard-btn-prominent {
+    padding: 7px 12px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .main-navbar-wrapper {
+    display: none;
+  }
+}
+

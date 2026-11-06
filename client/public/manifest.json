@@ -1,0 +1,16 @@
+{
+  "short_name": "GodavariGeoSeva",
+  "name": "Godavari GeoSeva 2027 - Pushkaralu GIS Platform",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192 512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#042f2e",
+  "theme_color": "#115e59",
+  "display": "standalone",
+  "orientation": "portrait"
+}

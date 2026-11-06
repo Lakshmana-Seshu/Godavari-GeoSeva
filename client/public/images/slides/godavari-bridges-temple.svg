@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%">
+  <defs>
+    <linearGradient id="twilightSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#022c22"/>
+      <stop offset="40%" stop-color="#064e3b"/>
+      <stop offset="75%" stop-color="#0f766e"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+
+    <radialGradient id="templeLight" cx="60%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fef3c7" stop-opacity="0.8"/>
+      <stop offset="35%" stop-color="#f59e0b" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#022c22" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="twilightRiver" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#b45309"/>
+      <stop offset="25%" stop-color="#0f766e"/>
+      <stop offset="65%" stop-color="#042f2e"/>
+      <stop offset="100%" stop-color="#021c17"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="1920" height="660" fill="url(#twilightSky)"/>
+
+  <!-- Warm Temple Light Glow -->
+  <circle cx="1250" cy="460" r="320" fill="url(#templeLight)"/>
+
+  <!-- Ancient Temple Gopuram & Shikhara Silhouette (Kovvur / Rajahmundry) -->
+  <g fill="#061c16">
+    <!-- Main Gopuram -->
+    <polygon points="1200,560 1250,220 1300,560"/>
+    <polygon points="1215,480 1250,260 1285,480" fill="#03120e"/>
+    <!-- Kalasams on top -->
+    <polygon points="1245,220 1250,185 1255,220" fill="#f59e0b"/>
+    <polygon points="1235,225 1240,200 1245,225" fill="#f59e0b"/>
+    <polygon points="1255,225 1260,200 1265,225" fill="#f59e0b"/>
+
+    <!-- Secondary Shrine -->
+    <polygon points="1350,560 1380,360 1410,560"/>
+    <polygon points="1377,360 1380,335 1383,360" fill="#f59e0b"/>
+
+    <!-- Mandapam Colonnade -->
+    <rect x="1150" y="520" width="320" height="40" rx="4"/>
+  </g>
+
+  <!-- Historic Havelock & Arch Bridges Spanning River -->
+  <g stroke="#03120e" stroke-width="8" fill="none">
+    <!-- Horizontal Deck -->
+    <line x1="0" y1="550" x2="1920" y2="550" stroke-width="14"/>
+
+    <!-- Truss Structure of Havelock Heritage Bridge -->
+    <polygon points="80,550 140,480 200,550" stroke-width="6"/>
+    <polygon points="200,550 260,480 320,550" stroke-width="6"/>
+    <polygon points="320,550 380,480 440,550" stroke-width="6"/>
+    <polygon points="440,550 500,480 560,550" stroke-width="6"/>
+    <polygon points="560,550 620,480 680,550" stroke-width="6"/>
+    <polygon points="680,550 740,480 800,550" stroke-width="6"/>
+    <polygon points="800,550 860,480 920,550" stroke-width="6"/>
+
+    <!-- Piers -->
+    <rect x="140" y="555" width="22" height="90" fill="#03120e" stroke="none"/>
+    <rect x="380" y="555" width="22" height="90" fill="#03120e" stroke="none"/>
+    <rect x="620" y="555" width="22" height="90" fill="#03120e" stroke="none"/>
+    <rect x="860" y="555" width="22" height="90" fill="#03120e" stroke="none"/>
+  </g>
+
+  <!-- Godavari River Water -->
+  <rect x="0" y="560" width="1920" height="520" fill="url(#twilightRiver)"/>
+
+  <!-- Water Temple Reflection & Waves -->
+  <ellipse cx="1250" cy="620" rx="140" ry="25" fill="#f59e0b" opacity="0.4"/>
+  <ellipse cx="1250" cy="740" rx="90" ry="16" fill="#14b8a6" opacity="0.3"/>
+  <path d="M 0 650 Q 480 630 960 655 T 1920 650" stroke="#f59e0b" stroke-width="2.5" fill="none" opacity="0.3"/>
+  <path d="M 0 760 Q 520 740 1040 765 T 1920 760" stroke="#2dd4bf" stroke-width="2" fill="none" opacity="0.25"/>
+</svg>
+

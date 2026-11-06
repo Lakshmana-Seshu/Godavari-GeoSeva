@@ -1,0 +1,171 @@
+{
+  "app": {
+    "title": "Godavari GeoSeva 2027",
+    "subtitle": "GIS-Based Mapping of Facilities & Civic Infrastructure",
+    "region": "Rajamahendravaram – Kovvur Corridor, Andhra Pradesh",
+    "authority": "Pushkaralu Organizing Authority"
+  },
+  "nav": {
+    "home": "Home",
+    "map": "Explore GIS Map",
+    "facilities": "Facilities Directory",
+    "reportIssue": "Report Civic Issue",
+    "emergency": "Emergency Helplines",
+    "login": "Official Sign In",
+    "admin": "Authority Console",
+    "dashboard": "Dashboard",
+    "logout": "Sign Out"
+  },
+  "hero": {
+    "badge": "Official Pilgrim Assistance & GIS Portal",
+    "title": "Godavari Pushkaralu 2027",
+    "headline": "Real-time navigation to bathing ghats, drinking water, medical posts, and civic infrastructure.",
+    "exploreMap": "Explore Interactive Map",
+    "findFacilities": "Locate Nearby Facilities",
+    "reportIssue": "Report a Broken Facility",
+    "statFacilities": "Verified Facilities",
+    "statGhats": "Bathing Ghats",
+    "statEmergency": "24/7 Rapid Response"
+  },
+  "categories": {
+    "ALL": "All Categories",
+    "GHAT": "Bathing Ghat",
+    "TOILET": "Public Toilet",
+    "DRINKING_WATER": "Drinking Water",
+    "MEDICAL": "Medical Post / First Aid",
+    "SHELTER": "Rest Area / Shelter",
+    "EMERGENCY": "Emergency & Rescue Post",
+    "ROAD_ACCESS": "Road & Bridge Corridor",
+    "OTHER": "Other Civic Facility"
+  },
+  "status": {
+    "OPEN": "Open & Operational",
+    "CLOSED": "Closed",
+    "TEMPORARILY_UNAVAILABLE": "Temporarily Unavailable",
+    "UNKNOWN": "Verification Underway",
+    "VERIFIED": "Official Verified",
+    "PENDING_VERIFICATION": "Pending Review",
+    "UNVERIFIED": "Unverified Report",
+    "REJECTED": "Rejected"
+  },
+  "map": {
+    "title": "Interactive GIS Map",
+    "subtitle": "Rajamahendravaram & Kovvur River Corridor",
+    "regionFull": "Full Corridor",
+    "regionRajahmundry": "Rajahmundry (East Bank)",
+    "regionKovvur": "Kovvur (West Bank)",
+    "regionBridges": "Connecting Bridges",
+    "searchPlaceholder": "Search facility by name or landmark...",
+    "showIssues": "Show Civic Issues",
+    "useGps": "Locate Me (GPS)",
+    "exactCoordinates": "Exact Geographic Coordinates (WGS84)",
+    "copyCoordinates": "Copy Coordinates",
+    "openGoogleMaps": "Open in Google Maps",
+    "directions": "Get Directions",
+    "reportHere": "Report Issue at this Location",
+    "accessibility": "Accessibility Features",
+    "wheelchair": "Wheelchair Accessible",
+    "ramp": "Ramp Slope Available",
+    "elderly": "Elderly / Infant Assistance",
+    "staleNotice": "This facility location was recently verified by the Municipal Authority."
+  },
+  "assistant": {
+    "name": "Godavari Seva Assistant",
+    "title": "AI Pilgrim & Voice Assistant",
+    "subtitle": "Ask in Telugu, Hindi, English, Tamil & 22 Indian Languages",
+    "welcome": "Namaskaram! I am your Godavari Seva Assistant for Pushkaralu 2027. Speak or type your question to find the nearest bathing ghats, drinking water points, medical camps, or transit routes.",
+    "inputPlaceholder": "Ask a question (e.g. Where is the nearest medical camp?)...",
+    "send": "Send",
+    "listening": "Listening in",
+    "speakToAssistant": "Speak to Godavari Seva Assistant",
+    "startVoice": "Voice Input",
+    "stopVoice": "Stop Listening",
+    "showOnMap": "Show on Map",
+    "quickQuestions": "Suggested Questions:",
+    "emergencyAlert": "For life-threatening emergencies, dial 112 or 108 immediately.",
+    "clearHistory": "Clear Session"
+  },
+  "report": {
+    "title": "Report a Pushkaralu Civic Issue",
+    "subtitle": "Help volunteers spot broken toilets, dry taps, or blocked pathways.",
+    "category": "Issue Category",
+    "titleInput": "Summary Title",
+    "description": "Detailed Description",
+    "coordinates": "Incident Coordinates",
+    "useGps": "Use My Current GPS",
+    "photo": "Attach Photo (Optional)",
+    "submit": "Submit Civic Grievance",
+    "successTitle": "Civic Report Registered!",
+    "refTracking": "Unique Tracking ID"
+  },
+  "admin": {
+    "dashboardTitle": "Geospatial Command & Operations Dashboard",
+    "mappedFacilities": "Total Mapped Facilities",
+    "verifiedRate": "Verified by Authority",
+    "unknownStatus": "Requires Inspection",
+    "openGrievances": "Open Civic Grievances",
+    "liveSync": "Live Sync Active",
+    "telemetry": "Telemetry Stream Active"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry",
+    "close": "Close",
+    "dismiss": "Dismiss",
+    "copy": "Copy",
+    "copied": "Copied!"
+  },
+  "slideshow": {
+    "ariaLabel": "Godavari Pushkaralu Highlights Slideshow",
+    "prevSlide": "Previous Slide",
+    "nextSlide": "Next Slide",
+    "pauseAutoplay": "Pause Slideshow Autoplay",
+    "startAutoplay": "Resume Slideshow Autoplay",
+    "goToSlide": "Go to slide {{slide}}",
+    "slideOf": "Slide {{current}} of {{total}}",
+    "slides": {
+      "welcome": {
+        "badge": "Official Pushkaralu 2027 Geospatial Portal",
+        "heading": "Godavari GeoSeva 2027",
+        "subheading": "Your Digital Guide to Godavari Pushkaralu",
+        "description": "Discover verified locations of river ghats, drinking water facilities, public toilets, medical camps, shelters, and essential civic infrastructure through our interactive GIS mapping platform.",
+        "primaryBtn": "Explore Facilities",
+        "secondaryBtn": "View Interactive Map"
+      },
+      "ghats": {
+        "badge": "Riverfront Safety & Access",
+        "heading": "Sacred Bathing Ghats & Riverfronts",
+        "subheading": "Pushkar Ghat, Kotilingala Revu & Goshpada Kshetram",
+        "description": "Navigate safely to 24x7 illuminated ghats equipped with river safety barricades, life-jacket stations, SDRF rescue teams, and dedicated elder and wheelchair ramps.",
+        "primaryBtn": "View Bathing Ghats",
+        "secondaryBtn": "Open GIS Map"
+      },
+      "water": {
+        "badge": "Civic Amenities & Free Water",
+        "heading": "Purified Water & Sanitation Network",
+        "subheading": "100% Free RO Water Distribution & Bio-Toilets",
+        "description": "Locate chilled RO drinking water posts, modern sanitation units, and pilgrim rest areas situated within 200 meters of all riverbanks and transit points.",
+        "primaryBtn": "Find Drinking Water",
+        "secondaryBtn": "Sanitation Facilities"
+      },
+      "medical": {
+        "badge": "Health & Rapid Response",
+        "heading": "24/7 Medical Care & First-Aid Camps",
+        "subheading": "Primary Health Centers, ORS Hydration & 108 Ambulances",
+        "description": "Immediate access to medical assistance, heatstroke recovery units, and emergency helplines connected to district hospitals via dedicated green corridors.",
+        "primaryBtn": "Emergency Helplines",
+        "secondaryBtn": "Medical Facilities"
+      },
+      "heritage": {
+        "badge": "Riverfront Architecture & Connectivity",
+        "heading": "Historic Bridges & Spiritual Landmarks",
+        "subheading": "Godavari Arch Bridge, Havelock Walkway & Kovvur Corridor",
+        "description": "Cross the sacred Godavari River with monitored pedestrian pathways, heritage viewpoints, and seamless transit between Rajamahendravaram and Kovvur.",
+        "primaryBtn": "Explore Corridor Map",
+        "secondaryBtn": "Report Civic Issue"
+      }
+    }
+  }
+}
+

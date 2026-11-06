@@ -1,0 +1,23 @@
+{
+  "name": "godavari-geoseva-2027",
+  "version": "1.0.0",
+  "description": "Godavari GeoSeva 2027 - GIS-Based Mapping of Facilities and Civic Infrastructure",
+  "scripts": {
+    "install:all": "npm --prefix server install && npm --prefix client install",
+    "seed": "npm --prefix server run seed",
+    "test": "npm --prefix server test",
+    "server": "npm --prefix server run dev",
+    "client": "npm --prefix client run dev"
+  },
+  "keywords": [
+    "gis",
+    "godavari-pushkaralu",
+    "leaflet",
+    "geojson",
+    "civic-infrastructure",
+    "crowdsourcing",
+    "mongodb"
+  ],
+  "author": "Godavari GeoSeva Engineering Team",
+  "license": "ISC"
+}

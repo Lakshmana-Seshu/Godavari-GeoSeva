@@ -1,0 +1,743 @@
+/**
+ * Demonstration Facilities Dataset for Godavari Pushkaralu 2027
+ * Geographically accurate coordinates along the Rajamahendravaram - Kovvur Godavari River corridor.
+ * Marked as dataSource: 'SYNTHETIC_DEMO' and isSyntheticDemo: true.
+ */
+
+export const DEMO_FACILITIES = [
+  {
+    _id: 'demo-ghat-01',
+    name: 'Pushkar Ghat Central',
+    category: 'GHAT',
+    description:
+      'Major river bathing ghat with dedicated safety barricades, stepped stone access, and life-jacket stations. Key pilgrim facility for Godavari Pushkaralu 2027.',
+    location: {
+      type: 'Point',
+      coordinates: [81.777, 17.0028], // [lng, lat]
+    },
+    address: 'Pushkar Ghat Promenade, Riverbank Road, Rajamahendravaram',
+    landmark: 'Near Godavari Arch Bridge Viewpoint',
+    operationalStatus: 'OPEN',
+    verificationStatus: 'VERIFIED',
+    accessibility: {
+      wheelchairAccessible: true,
+      rampAvailable: true,
+      elderlyAssistance: true,
+      notes: 'Ramp slope access at Gate 2 with dedicated wheelchairs',
+    },
+    openingHours: {
+      is24Hours: true,
+      notes: 'Operational 24/7 with round-the-clock SDRF lifeguards',
+    },
+    contactInformation: {
+      phone: '+91 883 2442001',
+      inChargeName: 'Sri K. Venkat Rao (Ghat Superintendent)',
+      emergencyHelpline: '108 / 112',
+    },
+    capacity: {
+      estimatedCapacity: 25000,
+      unit: 'pilgrims/hour',
+    },
+    dataSource: 'SYNTHETIC_DEMO',
+    isSyntheticDemo: true,
+    lastVerifiedAt: '2026-10-31T08:00:00.000Z',
+    updatedAt: '2026-10-31T08:00:00.000Z',
+  },
+  {
+    _id: 'demo-ghat-02',
+    name: 'Kotilingala Temple Ghat',
+    category: 'GHAT',
+    description:
+      'Historic northern bathing ghat with deep waters. River safety nets and illumination towers deployed. Key pilgrim facility for Godavari Pushkaralu 2027.',
+    location: {
+      type: 'Point',
+      coordinates: [81.782, 17.0145],
+    },
+    address: 'Kotilingala Revu, Northern Bank, Rajamahendravaram',
+    landmark: 'Opposite Sri Kotilingeswara Swamy Devalayam',
+    operationalStatus: 'OPEN',
+    verificationStatus: 'VERIFIED',
+    accessibility: {
+      wheelchairAccessible: false,
+      rampAvailable: false,
+      elderlyAssistance: true,
+      notes: 'Stone steps only; volunteer physical assistance available',
+    },
+    openingHours: {
+      is24Hours: false,
+      openTime: '04:00',
+      closeTime: '22:00',
+      notes: 'Night bathing restricted after 22:00 for safety',
+    },
+    contactInformation: {
+      phone: '+91 883 2442005',
+      inChargeName: 'P. Satyanarayana',
+      emergencyHelpline: '108',
+    },
+    capacity: {
+      estimatedCapacity: 15000,
+      unit: 'pilgrims/hour',
+    },
+    dataSource: 'SYNTHETIC_DEMO',
+    isSyntheticDemo: true,
+    lastVerifiedAt: '2026-10-31T08:00:00.000Z',
+    updatedAt: '2026-10-31T08:00:00.000Z',
+  },
+  {
+    _id: 'demo-ghat-03',
+    name: 'Saraswati Ghat',
+    category: 'GHAT',
+    description:
+      'Southern bathing ghat equipped with baby-feeding cubicles and changing rooms for women. Key pilgrim facility for Godavari Pushkaralu 2027.',
+    location: {
+      type: 'Point',
+      coordinates: [81.7745, 17.0005],
+    },
+    address: 'Saraswati Ghat Road, Rajamahendravaram',
+    landmark: 'Adjacent to Godavari Bund Road Park',
+    operationalStatus: 'OPEN',
+    verificationStatus: 'VERIFIED',
+    accessibility: {
+      wheelchairAccessible: true,
+      rampAvailable: true,
+      elderlyAssistance: true,
+      notes: 'Full ramp access along with separate queue for senior citizens',
+    },
+    openingHours: {
+      is24Hours: true,
+      notes: 'Open round-the-clock',
+    },
+    contactInformation: {
+      phone: '+91 883 2442008',
+      inChargeName: 'M. Lakshmi Devi',
+      emergencyHelpline: '112',
+    },
+    capacity: {
+      estimatedCapacity: 12000,
+      unit: 'pilgrims/hour',
+    },
+    dataSource: 'SYNTHETIC_DEMO',
+    isSyntheticDemo: true,
+    lastVerifiedAt: '2026-10-31T08:00:00.000Z',
+    updatedAt: '2026-10-31T08:00:00.000Z',
+  },
+  {
+    _id: 'demo-ghat-04',
+    name: 'Goshpada Kshetram Ghat - Kovvur',
+    category: 'GHAT',
+    description:
+      'Primary western-bank bathing ghat in Kovvur town across the river. Key pilgrim facility for Godavari Pushkaralu 2027.',
+    location: {
+      type: 'Point',
+      coordinates: [81.728, 17.012],
+    },
+    address: 'Goshpada Ghat Approach Road, Kovvur',
+    landmark: 'Near Kovvur Rail-cum-Road Bridge Junction',
+    operationalStatus: 'OPEN',
+    verificationStatus: 'VERIFIED',
+    accessibility: {
+      wheelchairAccessible: true,
+      rampAvailable: true,
+      elderlyAssistance: true,
+      notes: 'Wheelchair access available via Kovvur south gate',
+    },
+    openingHours: {
+      is24Hours: true,
+      notes: '24 hours open during festival dates',
+    },
+    contactInformation: {
+      phone: '+91 8813 231102',
+      inChargeName: 'B. Krishna Murthy',
+      emergencyHelpline: '108',
+    },
+    capacity: {
+      estimatedCapacity: 18000,
+      unit: 'pilgrims/hour',
+    },
+    dataSource: 'SYNTHETIC_DEMO',
+    isSyntheticDemo: true,
+    lastVerifiedAt: '2026-10-31T08:00:00.000Z',
+    updatedAt: '2026-10-31T08:00:00.000Z',
+  },
+  {
+    _id: 'demo-ghat-05',
+    name: 'Markandeya Ghat Safety Area',
+    category: 'GHAT',
+    description:
+      'Central ghat with shallow water bathing zones, barricaded river railings, and dedicated volunteer life-guard posts.',
+    location: {
+      type: 'Point',
+      coordinates: [81.776, 17.0042],
+    },
+    address: 'Markandeya Temple Road, Rajamahendravaram',
+    landmark: 'Near Sri Markandeyeswara Swamy Temple',
+    operationalStatus: 'OPEN',
+    verificationStatus: 'VERIFIED',
+    accessibility: {
+      wheelchairAccessible: true,
+      rampAvailable: true,
+      elderlyAssistance: true,
+    },
+    openingHours: {
+      is24Hours: true,
+      notes: '24/7 lighting and surveillance',
+    },
+    contactInformation: {
+      phone: '+91 883 2442012',
+      inChargeName: 'G. Appa Rao',
+      emergencyHelpline: '112',
+    },
+    capacity: {
+      estimatedCapacity: 10000,
+      unit: 'pilgrims/hour',
+    },
+    dataSource: 'SYNTHETIC_DEMO',
+    isSyntheticDemo: true,
+    lastVerifiedAt: '2026-10-31T08:00:00.000Z',
+    updatedAt: '2026-10-31T08:00:00.000Z',
+  },
+  {
+    _id: 'demo-toilet-01',
+    name: 'Pushkar Ghat Bio-Toilets Cluster A',
+    category: 'TOILET',
+    description:
+      'High-capacity 40-seat automated bio-toilet complex with dedicated male, female, and accessible cubicles. Synthetic test record.',
+    location: {
+      type: 'Point',
+      coordinates: [81.7765, 17.0032],
+    },
+    address: 'Outer Concourse, Gate 3, Pushkar Ghat, Rajamahendravaram',
+    landmark: 'Near Central Clock Tower',
+    operationalStatus: 'OPEN',
+    verificationStatus: 'VERIFIED',
+    accessibility: {
+      wheelchairAccessible: true,
+      rampAvailable: true,
+      notes: '2 dedicated wide cubicles for persons with disabilities',
+    },
+    openingHours: {
+      is24Hours: true,
+      notes: 'Continuous sanitation cycling',
+    },
+    contactInformation: {
+      phone: '+91 883 2442015',
+      inChargeName: 'Sanitation Officer Ramesh',
+      emergencyHelpline: '112',
+    },
+    capacity: {
+      estimatedCapacity: 40,
+      unit: 'cubicles',
+    },
+    dataSource: 'SYNTHETIC_DEMO',
+    isSyntheticDemo: true,
+    lastVerifiedAt: '2026-10-31T08:00:00.000Z',
+    updatedAt: '2026-10-31T08:00:00.000Z',
+  },
+  {
+    _id: 'demo-toilet-02',
+    name: 'Kotilingala Mobile Toilets Complex',
+    category: 'TOILET',
+    description:
+      '20-unit trailer-mounted mobile sanitation unit. Key pilgrim facility for Godavari Pushkaralu 2027.',
+    location: {
+      type: 'Point',
+      coordinates: [81.7812, 17.0138],
+    },
+    address: 'Temple Parking Lot 2, Kotilingala, Rajamahendravaram',
+    landmark: 'Beside APSRTC Temporary Bus Stop',
+    operationalStatus: 'TEMPORARILY_UNAVAILABLE',
+    verificationStatus: 'VERIFIED',
+    accessibility: {
+      wheelchairAccessible: false,
+      rampAvailable: false,
+      notes: 'Steps required',
+    },
+    openingHours: {
+      is24Hours: true,
+      notes: 'Undergoing emergency water pump repair',
+    },
+    contactInformation: {
+      phone: '+91 883 2442022',
+      inChargeName: 'Supervisor D. Prasad',
+      emergencyHelpline: '108',
+    },
+    capacity: {
+      estimatedCapacity: 20,
+      unit: 'cubicles',
+    },
+    dataSource: 'SYNTHETIC_DEMO',
+    isSyntheticDemo: true,
+    lastVerifiedAt: '2026-10-31T08:00:00.000Z',
+    updatedAt: '2026-10-31T08:00:00.000Z',
+  },
+  {
+    _id: 'demo-toilet-03',
+    name: 'Kovvur Goshpada Kshetram Public Toilets',
+    category: 'TOILET',
+    description:
+      'Newly constructed municipal sanitation block with running water and 24-hour maintenance team.',
+    location: {
+      type: 'Point',
+      coordinates: [81.7272, 17.0115],
+    },
+    address: 'Ghat Link Road, Kovvur',
+    landmark: 'Behind Kovvur Bus Shelter',
+    operationalStatus: 'OPEN',
+    verificationStatus: 'VERIFIED',
+    accessibility: {
+      wheelchairAccessible: true,
+      rampAvailable: true,
+    },
+    openingHours: {
+      is24Hours: true,
+    },
+    contactInformation: {
+      phone: '+91 8813 231120',
+      inChargeName: 'S. Ramana',
+      emergencyHelpline: '112',
+    },
+    capacity: {
+      estimatedCapacity: 24,
+      unit: 'cubicles',
+    },
+    dataSource: 'SYNTHETIC_DEMO',
+    isSyntheticDemo: true,
+    lastVerifiedAt: '2026-10-31T08:00:00.000Z',
+    updatedAt: '2026-10-31T08:00:00.000Z',
+  },
+  {
+    _id: 'demo-water-01',
+    name: 'Pushkar Ghat RO Drinking Water Kiosk #1',
+    category: 'DRINKING_WATER',
+    description:
+      'Continuous chilled Reverse Osmosis (RO) purified drinking water dispensing station with 12 stainless steel taps. Synthetic test record.',
+    location: {
+      type: 'Point',
+      coordinates: [81.7775, 17.0025],
+    },
+    address: 'Promenade Entry Gate 1, Pushkar Ghat, Rajamahendravaram',
+    landmark: 'Behind Information Pavilion',
+    operationalStatus: 'OPEN',
+    verificationStatus: 'VERIFIED',
+    accessibility: {
+      wheelchairAccessible: true,
+      rampAvailable: true,
+      notes: 'Lower-height taps fitted for children and wheelchair users',
+    },
+    openingHours: {
+      is24Hours: true,
+      notes: 'Constant water filtration',
+    },
+    contactInformation: {
+      phone: '+91 883 2442030',
+      inChargeName: 'Water Works Engineer Sudhakar',
+      emergencyHelpline: '112',
+    },
+    capacity: {
+      estimatedCapacity: 5000,
+      unit: 'liters/hour',
+    },
+    dataSource: 'SYNTHETIC_DEMO',
+    isSyntheticDemo: true,
+    lastVerifiedAt: '2026-10-31T08:00:00.000Z',
+    updatedAt: '2026-10-31T08:00:00.000Z',
+  },
+  {
+    _id: 'demo-water-02',
+    name: 'Saraswati Ghat Water Distribution Point',
+    category: 'DRINKING_WATER',
+    description:
+      'Packaged water bottle distribution and refill counter managed by volunteer scouts. Synthetic test record.',
+    location: {
+      type: 'Point',
+      coordinates: [81.775, 17.0012],
+    },
+    address: 'Saraswati Ghat Exit Pathway, Rajamahendravaram',
+    landmark: 'Near First Aid Tent',
+    operationalStatus: 'OPEN',
+    verificationStatus: 'VERIFIED',
+    accessibility: {
+      wheelchairAccessible: true,
+      rampAvailable: true,
+      notes: 'Paved ground level counter',
+    },
+    openingHours: {
+      is24Hours: false,
+      openTime: '05:00',
+      closeTime: '23:00',
+    },
+    contactInformation: {
+      phone: '+91 883 2442033',
+      inChargeName: 'Volunteer Coordinator Anand',
+    },
+    capacity: {
+      estimatedCapacity: 3000,
+      unit: 'liters/hour',
+    },
+    dataSource: 'SYNTHETIC_DEMO',
+    isSyntheticDemo: true,
+    lastVerifiedAt: '2026-10-31T08:00:00.000Z',
+    updatedAt: '2026-10-31T08:00:00.000Z',
+  },
+  {
+    _id: 'demo-water-03',
+    name: 'Kovvur River Approach RO Drinking Water Center',
+    category: 'DRINKING_WATER',
+    description:
+      'High-capacity clean water hub with 10 automated push-button faucets and paper cups.',
+    location: {
+      type: 'Point',
+      coordinates: [81.7288, 17.0125],
+    },
+    address: 'Main Temple Road, Kovvur',
+    landmark: 'Near Kovvur Police Assistance Booth',
+    operationalStatus: 'OPEN',
+    verificationStatus: 'VERIFIED',
+    accessibility: {
+      wheelchairAccessible: true,
+      rampAvailable: true,
+    },
+    openingHours: {
+      is24Hours: true,
+    },
+    contactInformation: {
+      phone: '+91 8813 231135',
+      inChargeName: 'J. Srinivas Rao',
+    },
+    capacity: {
+      estimatedCapacity: 4000,
+      unit: 'liters/hour',
+    },
+    dataSource: 'SYNTHETIC_DEMO',
+    isSyntheticDemo: true,
+    lastVerifiedAt: '2026-10-31T08:00:00.000Z',
+    updatedAt: '2026-10-31T08:00:00.000Z',
+  },
+  {
+    _id: 'demo-med-01',
+    name: 'Central Riverfront 24x7 Medical Camp',
+    category: 'MEDICAL',
+    description:
+      'Fully equipped 20-bed emergency triage facility with doctors, cardiac monitors, oxygen supplies, and 2 stationed ALS ambulances. Synthetic test record.',
+    location: {
+      type: 'Point',
+      coordinates: [81.778, 17.004],
+    },
+    address: 'Main Bund Road, Between Pushkar & Markandeya Ghats, Rajamahendravaram',
+    landmark: 'Adjacent to Municipal Police Control Post',
+    operationalStatus: 'OPEN',
+    verificationStatus: 'VERIFIED',
+    accessibility: {
+      wheelchairAccessible: true,
+      rampAvailable: true,
+      elderlyAssistance: true,
+      notes: 'Hospital-standard ramps and stretchers',
+    },
+    openingHours: {
+      is24Hours: true,
+      notes: '24/7 round-the-clock emergency doctors',
+    },
+    contactInformation: {
+      phone: '+91 883 2442108',
+      inChargeName: 'Dr. S. R. Chary, MD (Chief Medical Officer)',
+      emergencyHelpline: '108',
+    },
+    capacity: {
+      estimatedCapacity: 20,
+      unit: 'emergency beds',
+    },
+    dataSource: 'SYNTHETIC_DEMO',
+    isSyntheticDemo: true,
+    lastVerifiedAt: '2026-10-31T08:00:00.000Z',
+    updatedAt: '2026-10-31T08:00:00.000Z',
+  },
+  {
+    _id: 'demo-med-02',
+    name: 'Kotilingala First Aid & ORS Booth',
+    category: 'MEDICAL',
+    description:
+      'First-aid outpost for heat stroke, minor cuts, blood pressure checks, and oral rehydration salt distribution. Synthetic test record.',
+    location: {
+      type: 'Point',
+      coordinates: [81.783, 17.015],
+    },
+    address: 'Kotilingala Main Entry Arch, Rajamahendravaram',
+    landmark: 'Beside Police Assistance Booth',
+    operationalStatus: 'OPEN',
+    verificationStatus: 'VERIFIED',
+    accessibility: {
+      wheelchairAccessible: true,
+      rampAvailable: true,
+      notes: 'Ground level first-aid tent',
+    },
+    openingHours: {
+      is24Hours: true,
+      notes: 'Operates throughout event dates',
+    },
+    contactInformation: {
+      phone: '+91 883 2442109',
+      inChargeName: 'Sister Mary (Duty Nurse)',
+      emergencyHelpline: '108',
+    },
+    capacity: {
+      estimatedCapacity: 4,
+      unit: 'triage beds',
+    },
+    dataSource: 'SYNTHETIC_DEMO',
+    isSyntheticDemo: true,
+    lastVerifiedAt: '2026-10-31T08:00:00.000Z',
+    updatedAt: '2026-10-31T08:00:00.000Z',
+  },
+  {
+    _id: 'demo-med-03',
+    name: 'Kovvur Goshpada Primary Health Outpost',
+    category: 'MEDICAL',
+    description:
+      'Western bank medical center with paramedical staff, emergency splints, and an on-call 108 ambulance.',
+    location: {
+      type: 'Point',
+      coordinates: [81.7275, 17.0118],
+    },
+    address: 'Goshpada Ghat Road, Kovvur',
+    landmark: 'Near Kovvur Community Health Center Link',
+    operationalStatus: 'OPEN',
+    verificationStatus: 'VERIFIED',
+    accessibility: {
+      wheelchairAccessible: true,
+      rampAvailable: true,
+      elderlyAssistance: true,
+    },
+    openingHours: {
+      is24Hours: true,
+    },
+    contactInformation: {
+      phone: '+91 8813 231108',
+      inChargeName: 'Dr. K. Anuradha',
+      emergencyHelpline: '108',
+    },
+    capacity: {
+      estimatedCapacity: 8,
+      unit: 'emergency beds',
+    },
+    dataSource: 'SYNTHETIC_DEMO',
+    isSyntheticDemo: true,
+    lastVerifiedAt: '2026-10-31T08:00:00.000Z',
+    updatedAt: '2026-10-31T08:00:00.000Z',
+  },
+  {
+    _id: 'demo-shelter-01',
+    name: 'Pilgrim Transit Shelter & Rest Hall 1',
+    category: 'SHELTER',
+    description:
+      'Waterproof German hangar canopy with seating for 3,000 pilgrims, industrial fans, mobile charging points, and public announcement system. Synthetic test record.',
+    location: {
+      type: 'Point',
+      coordinates: [81.773, 16.998],
+    },
+    address: 'Old Municipal Grounds, Godavari Bund, Rajamahendravaram',
+    landmark: 'Near Railway Station Approach',
+    operationalStatus: 'OPEN',
+    verificationStatus: 'VERIFIED',
+    accessibility: {
+      wheelchairAccessible: true,
+      rampAvailable: true,
+      elderlyAssistance: true,
+      notes: 'Level asphalt floor with designated elderly resting enclave',
+    },
+    openingHours: {
+      is24Hours: true,
+      notes: 'Open 24/7 during Pushkaralu',
+    },
+    contactInformation: {
+      phone: '+91 883 2442080',
+      inChargeName: 'Revenue Officer Nageswara Rao',
+      emergencyHelpline: '112',
+    },
+    capacity: {
+      estimatedCapacity: 3000,
+      unit: 'persons',
+    },
+    dataSource: 'SYNTHETIC_DEMO',
+    isSyntheticDemo: true,
+    lastVerifiedAt: '2026-10-31T08:00:00.000Z',
+    updatedAt: '2026-10-31T08:00:00.000Z',
+  },
+  {
+    _id: 'demo-shelter-02',
+    name: 'Kovvur Riverfront Pilgrim Shed',
+    category: 'SHELTER',
+    description:
+      'Temporary shade shelter with drinking water access and carpeted rest area. Synthetic test record.',
+    location: {
+      type: 'Point',
+      coordinates: [81.7295, 17.0135],
+    },
+    address: 'Near Kovvur Ghat Concourse, Kovvur',
+    landmark: 'Adjacent to Kovvur Temple Office',
+    operationalStatus: 'OPEN',
+    verificationStatus: 'PENDING_VERIFICATION',
+    accessibility: {
+      wheelchairAccessible: true,
+      rampAvailable: true,
+    },
+    openingHours: {
+      is24Hours: true,
+    },
+    contactInformation: {
+      phone: '+91 8813 231140',
+      inChargeName: 'Volunteer Lead Srinivas',
+    },
+    capacity: {
+      estimatedCapacity: 1500,
+      unit: 'persons',
+    },
+    dataSource: 'SYNTHETIC_DEMO',
+    isSyntheticDemo: true,
+    lastVerifiedAt: '2026-10-31T08:00:00.000Z',
+    updatedAt: '2026-10-31T08:00:00.000Z',
+  },
+  {
+    _id: 'demo-emerg-01',
+    name: 'NDRF & SDRF River Rescue Command Post',
+    category: 'EMERGENCY',
+    description:
+      'Disaster response headquarters equipped with 8 inflatable motorized rescue boats, deep divers, sonar gear, and life buoy launchers. Synthetic test record.',
+    location: {
+      type: 'Point',
+      coordinates: [81.7758, 17.0019],
+    },
+    address: 'River Police Jetty, Godavari Bund, Rajamahendravaram',
+    landmark: 'Adjacent to Pushkar Ghat southern edge',
+    operationalStatus: 'OPEN',
+    verificationStatus: 'VERIFIED',
+    accessibility: {
+      wheelchairAccessible: false,
+      notes: 'Tactical command operations zone',
+    },
+    openingHours: {
+      is24Hours: true,
+      notes: '24/7 water surveillance radar and watch tower',
+    },
+    contactInformation: {
+      phone: '+91 883 2442100',
+      inChargeName: 'Inspector Rajesh Kumar (10th Bn NDRF)',
+      emergencyHelpline: '112 / 1077 (District Control)',
+    },
+    capacity: {
+      estimatedCapacity: 100,
+      unit: 'rescue personnel',
+    },
+    dataSource: 'SYNTHETIC_DEMO',
+    isSyntheticDemo: true,
+    lastVerifiedAt: '2026-10-31T08:00:00.000Z',
+    updatedAt: '2026-10-31T08:00:00.000Z',
+  },
+  {
+    _id: 'demo-emerg-02',
+    name: 'Fire & Rescue Station - Pushkar Post',
+    category: 'EMERGENCY',
+    description:
+      'Stationed high-pressure fire tenders, hydraulic cutters, and rapid emergency intervention squad. Synthetic test record.',
+    location: {
+      type: 'Point',
+      coordinates: [81.7795, 17.0055],
+    },
+    address: 'Main Bund Crossing, Rajamahendravaram',
+    landmark: 'Near River View Hotel Junction',
+    operationalStatus: 'OPEN',
+    verificationStatus: 'VERIFIED',
+    accessibility: {
+      wheelchairAccessible: true,
+    },
+    openingHours: {
+      is24Hours: true,
+    },
+    contactInformation: {
+      phone: '+91 883 2442101',
+      inChargeName: 'Station Fire Officer B. Mohan Rao',
+      emergencyHelpline: '101 / 112',
+    },
+    capacity: {
+      estimatedCapacity: 4,
+      unit: 'fire engines',
+    },
+    dataSource: 'SYNTHETIC_DEMO',
+    isSyntheticDemo: true,
+    lastVerifiedAt: '2026-10-31T08:00:00.000Z',
+    updatedAt: '2026-10-31T08:00:00.000Z',
+  },
+  {
+    _id: 'demo-road-01',
+    name: 'Pedestrian Holding Area & Queue Barricade',
+    category: 'ROAD_ACCESS',
+    description:
+      'Organized zigzag crowd holding barricade with mist-cooling system, overhead shade mesh, and safe dispersal routes. Synthetic test record.',
+    location: {
+      type: 'Point',
+      coordinates: [81.7752, 16.9995],
+    },
+    address: 'South Bund Entrance Corridor, Rajamahendravaram',
+    landmark: 'Leading to Saraswati & Pushkar Ghats',
+    operationalStatus: 'OPEN',
+    verificationStatus: 'VERIFIED',
+    accessibility: {
+      wheelchairAccessible: true,
+      rampAvailable: true,
+      elderlyAssistance: true,
+      notes: 'Designated priority lane for elderly pilgrims and families with infants',
+    },
+    openingHours: {
+      is24Hours: true,
+    },
+    contactInformation: {
+      phone: '+91 883 2442050',
+      inChargeName: 'Traffic Inspector Murthy',
+      emergencyHelpline: '100 / 112',
+    },
+    capacity: {
+      estimatedCapacity: 10000,
+      unit: 'pilgrims in queue',
+    },
+    dataSource: 'SYNTHETIC_DEMO',
+    isSyntheticDemo: true,
+    lastVerifiedAt: '2026-10-31T08:00:00.000Z',
+    updatedAt: '2026-10-31T08:00:00.000Z',
+  },
+  {
+    _id: 'demo-road-02',
+    name: 'Godavari Rail-cum-Road Bridge Access Gate',
+    category: 'ROAD_ACCESS',
+    description:
+      'Major pedestrian and authorized shuttle corridor connecting Rajamahendravaram east bank to Kovvur west bank.',
+    location: {
+      type: 'Point',
+      coordinates: [81.754, 17.009],
+    },
+    address: 'Rail-cum-Road Bridge Approach, Godavari Corridor',
+    landmark: 'Mid-river connection between Rajamahendravaram and Kovvur',
+    operationalStatus: 'OPEN',
+    verificationStatus: 'VERIFIED',
+    accessibility: {
+      wheelchairAccessible: true,
+      rampAvailable: true,
+      elderlyAssistance: true,
+    },
+    openingHours: {
+      is24Hours: true,
+    },
+    contactInformation: {
+      phone: '+91 883 2442060',
+      inChargeName: 'Bridge Traffic Control Room',
+      emergencyHelpline: '112',
+    },
+    capacity: {
+      estimatedCapacity: 40000,
+      unit: 'pilgrims/hour',
+    },
+    dataSource: 'SYNTHETIC_DEMO',
+    isSyntheticDemo: true,
+    lastVerifiedAt: '2026-10-31T08:00:00.000Z',
+    updatedAt: '2026-10-31T08:00:00.000Z',
+  },
+];
+

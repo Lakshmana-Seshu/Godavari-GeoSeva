@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%">
+  <defs>
+    <linearGradient id="amenitySky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#082f49"/>
+      <stop offset="50%" stop-color="#0369a1"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+
+    <radialGradient id="waterDropletGlow" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#e0f2fe" stop-opacity="0.8"/>
+      <stop offset="40%" stop-color="#38bdf8" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="groundGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+
+    <linearGradient id="kioskGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky Background -->
+  <rect width="1920" height="700" fill="url(#amenitySky)"/>
+
+  <!-- Water Droplet Glow Aura -->
+  <circle cx="960" cy="400" r="340" fill="url(#waterDropletGlow)"/>
+
+  <!-- Iconic Water Ripple Pattern -->
+  <circle cx="960" cy="400" r="140" fill="none" stroke="#bae6fd" stroke-width="4" opacity="0.6"/>
+  <circle cx="960" cy="400" r="220" fill="none" stroke="#7dd3fc" stroke-width="3" opacity="0.4"/>
+  <circle cx="960" cy="400" r="300" fill="none" stroke="#38bdf8" stroke-width="2" opacity="0.25"/>
+
+  <!-- Giant Stylized Water Drop Silhouette in center -->
+  <path d="M 960 260 C 900 350, 840 430, 840 500 C 840 566, 894 620, 960 620 C 1026 620, 1080 566, 1080 500 C 1080 430, 1020 350, 960 260 Z" fill="#38bdf8" opacity="0.35"/>
+  <path d="M 960 300 C 920 370, 880 430, 880 480 C 880 524, 916 560, 960 560 C 1004 560, 1040 524, 1040 480 C 1040 430, 1000 370, 960 300 Z" fill="#e0f2fe" opacity="0.5"/>
+
+  <!-- Ground Plaza -->
+  <rect x="0" y="680" width="1920" height="400" fill="url(#groundGrad)"/>
+  <line x1="0" y1="680" x2="1920" y2="680" stroke="#38bdf8" stroke-width="3" opacity="0.6"/>
+
+  <!-- Drinking Water RO Kiosk (Left) -->
+  <g>
+    <rect x="280" y="520" width="380" height="200" rx="16" fill="url(#kioskGrad)" stroke="#7dd3fc" stroke-width="3"/>
+    <rect x="320" y="550" width="300" height="50" rx="8" fill="#0f172a" opacity="0.8"/>
+    <text x="470" y="582" font-family="sans-serif" font-size="18" font-weight="bold" fill="#38bdf8" text-anchor="middle">RO PURIFIED WATER (FREE)</text>
+    <circle cx="380" cy="645" r="22" fill="#0284c7"/>
+    <circle cx="470" cy="645" r="22" fill="#0284c7"/>
+    <circle cx="560" cy="645" r="22" fill="#0284c7"/>
+    <path d="M 378 635 L 382 635 L 380 655 Z" fill="#ffffff"/>
+    <path d="M 468 635 L 472 635 L 470 655 Z" fill="#ffffff"/>
+    <path d="M 558 635 L 562 635 L 560 655 Z" fill="#ffffff"/>
+  </g>
+
+  <!-- Eco Bio-Toilet Hub (Right) -->
+  <g>
+    <rect x="1260" y="520" width="380" height="200" rx="16" fill="#0f766e" stroke="#2dd4bf" stroke-width="3"/>
+    <rect x="1300" y="550" width="300" height="50" rx="8" fill="#042f2e" opacity="0.8"/>
+    <text x="1450" y="582" font-family="sans-serif" font-size="18" font-weight="bold" fill="#2dd4bf" text-anchor="middle">MUNICIPAL BIO-TOILET UNIT</text>
+    <rect x="1330" y="620" width="60" height="70" rx="6" fill="#134e4a"/>
+    <rect x="1420" y="620" width="60" height="70" rx="6" fill="#134e4a"/>
+    <rect x="1510" y="620" width="60" height="70" rx="6" fill="#134e4a"/>
+  </g>
+</svg>
+

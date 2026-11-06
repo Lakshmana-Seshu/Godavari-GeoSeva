@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%">
+  <defs>
+    <linearGradient id="nightSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#040d1a"/>
+      <stop offset="50%" stop-color="#0d233a"/>
+      <stop offset="100%" stop-color="#163852"/>
+    </linearGradient>
+
+    <radialGradient id="ghatFloodlight" cx="35%" cy="30%" r="55%">
+      <stop offset="0%" stop-color="#fff8db" stop-opacity="0.9"/>
+      <stop offset="35%" stop-color="#f59e0b" stop-opacity="0.6"/>
+      <stop offset="70%" stop-color="#0d9488" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#040d1a" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="stoneSteps" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="50%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+
+    <linearGradient id="riverGhatWater" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f3b46"/>
+      <stop offset="50%" stop-color="#0b2830"/>
+      <stop offset="100%" stop-color="#06151a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Night Sky -->
+  <rect width="1920" height="600" fill="url(#nightSky)"/>
+
+  <!-- High Mast Illumination Light Cones -->
+  <polygon points="680,180 320,700 1040,700" fill="url(#ghatFloodlight)" opacity="0.55"/>
+  <polygon points="1350,160 980,680 1720,680" fill="url(#ghatFloodlight)" opacity="0.45"/>
+
+  <!-- High Mast Floodlight Poles -->
+  <line x1="680" y1="180" x2="680" y2="520" stroke="#94a3b8" stroke-width="6"/>
+  <circle cx="680" cy="180" r="14" fill="#fef08a"/>
+  <line x1="1350" y1="160" x2="1350" y2="510" stroke="#94a3b8" stroke-width="6"/>
+  <circle cx="1350" cy="160" r="14" fill="#fef08a"/>
+
+  <!-- Temple & Mandapam Silhouettes -->
+  <g fill="#0b1724">
+    <!-- Mandapam Pillars -->
+    <rect x="220" y="380" width="320" height="150" rx="8"/>
+    <polygon points="200,380 380,260 560,380"/>
+    <circle cx="380" cy="250" r="12" fill="#f59e0b"/>
+
+    <!-- Temple Kalasam -->
+    <polygon points="1520,440 1550,310 1580,440"/>
+    <circle cx="1550" cy="300" r="10" fill="#f59e0b"/>
+  </g>
+
+  <!-- Pushkaralu Flags -->
+  <g fill="#ea580c">
+    <polygon points="450,420 510,400 450,380"/>
+    <polygon points="780,430 840,410 780,390"/>
+    <polygon points="1200,420 1260,400 1200,380"/>
+    <polygon points="1600,430 1660,410 1600,390"/>
+  </g>
+
+  <!-- Ghat Stepped Stone Promenade -->
+  <g fill="url(#stoneSteps)">
+    <rect x="0" y="520" width="1920" height="35"/>
+    <rect x="0" y="555" width="1920" height="40"/>
+    <rect x="0" y="595" width="1920" height="45"/>
+    <rect x="0" y="640" width="1920" height="50"/>
+    <rect x="0" y="690" width="1920" height="55"/>
+  </g>
+
+  <!-- Step Highlight Edges -->
+  <line x1="0" y1="520" x2="1920" y2="520" stroke="#f8fafc" stroke-width="2.5" opacity="0.4"/>
+  <line x1="0" y1="555" x2="1920" y2="555" stroke="#f8fafc" stroke-width="2.5" opacity="0.35"/>
+  <line x1="0" y1="595" x2="1920" y2="595" stroke="#f8fafc" stroke-width="2" opacity="0.3"/>
+  <line x1="0" y1="640" x2="1920" y2="640" stroke="#f8fafc" stroke-width="2" opacity="0.25"/>
+  <line x1="0" y1="690" x2="1920" y2="690" stroke="#f8fafc" stroke-width="2" opacity="0.2"/>
+
+  <!-- Water River Sector -->
+  <rect x="0" y="745" width="1920" height="335" fill="url(#riverGhatWater)"/>
+
+  <!-- Water Ripples & Gold Reflections -->
+  <ellipse cx="680" cy="780" rx="160" ry="20" fill="#f59e0b" opacity="0.4"/>
+  <ellipse cx="1350" cy="775" rx="140" ry="18" fill="#f59e0b" opacity="0.35"/>
+  <path d="M 0 810 Q 480 790 960 815 T 1920 810" stroke="#0d9488" stroke-width="3" fill="none" opacity="0.4"/>
+  <path d="M 0 880 Q 520 860 1040 885 T 1920 880" stroke="#14b8a6" stroke-width="2" fill="none" opacity="0.3"/>
+
+  <!-- River Safety Barricades & Life Buoys -->
+  <g stroke="#ef4444" stroke-width="6" fill="none">
+    <line x1="120" y1="745" x2="1800" y2="745" stroke-dasharray="25, 15"/>
+  </g>
+  <g fill="#ea580c" stroke="#ffffff" stroke-width="3">
+    <circle cx="380" cy="745" r="14"/>
+    <circle cx="780" cy="745" r="14"/>
+    <circle cx="1180" cy="745" r="14"/>
+    <circle cx="1580" cy="745" r="14"/>
+  </g>
+</svg>
+

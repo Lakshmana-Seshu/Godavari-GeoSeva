@@ -1,0 +1,129 @@
+# ==============================================================================
+# Godavari GeoSeva 2027 - Git Ignore Configuration
+# GIS-Based Infrastructure Mapping & Multilingual Pushkaralu Assistance Platform
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Package Dependencies
+# ------------------------------------------------------------------------------
+node_modules/
+*/node_modules/
+.pnpm-store/
+
+# ------------------------------------------------------------------------------
+# 2. Environment Variables & Secret Credentials (CRITICAL SECURITY)
+# ------------------------------------------------------------------------------
+# Never commit real API keys, JWT secrets, database URIs, or credentials
+.env
+.env.*
+*.env
+*.env.local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Allow committed template files for safe developer onboarding
+!.env.example
+!*.env.example
+!client/.env.example
+!server/.env.example
+
+# ------------------------------------------------------------------------------
+# 3. Build & Bundler Artifacts (Frontend: Vite / React)
+# ------------------------------------------------------------------------------
+dist/
+dist-ssr/
+build/
+out/
+.vite/
+client/dist/
+client/.vite/
+*.tsbuildinfo
+
+# ------------------------------------------------------------------------------
+# 4. Local Database Storage (MongoDB Engine Data)
+# ------------------------------------------------------------------------------
+# Ignore raw WiredTiger database files, locks, diagnostic traces, and journals
+mongodb_data/
+*.wt
+mongod.lock
+diagnostic.data/
+journal/
+
+# ------------------------------------------------------------------------------
+# 5. Runtime User Uploads & Media
+# ------------------------------------------------------------------------------
+# Ignore pilgrim grievance photos, uploaded documents, and temporary media
+uploads/*
+server/uploads/*
+!uploads/.gitkeep
+!server/uploads/.gitkeep
+
+# ------------------------------------------------------------------------------
+# 6. Logs & Debug Artifacts
+# ------------------------------------------------------------------------------
+logs/
+server/logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ------------------------------------------------------------------------------
+# 7. Testing & Code Coverage
+# ------------------------------------------------------------------------------
+coverage/
+client/coverage/
+server/coverage/
+.nyc_output/
+*.lcov
+
+# ------------------------------------------------------------------------------
+# 8. Cache & Temporary Directories
+# ------------------------------------------------------------------------------
+.cache/
+client/.cache/
+.eslintcache
+.stylelintcache
+*.tmp
+*.temp
+
+# ------------------------------------------------------------------------------
+# 9. Operating System Artifacts (Windows / macOS / Linux)
+# ------------------------------------------------------------------------------
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+desktop.ini
+$RECYCLE.BIN/
+
+# ------------------------------------------------------------------------------
+# 10. Code Editors & IDE Settings
+# ------------------------------------------------------------------------------
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*.swo
+*~
+
+# Visual Studio Code (Ignore personal settings while allowing shared workspace config if needed)
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
