@@ -2,6 +2,7 @@ export const SAMPLE_FACILITIES = [
   {
     name: 'Pushkar Ghat Central (Demonstration Record)',
     category: 'GHAT',
+    photographs: ['/images/facilities/ghat-central.svg'],
     description:
       'Major river bathing ghat with dedicated safety barricades, stepped stone access, and life-jacket stations. Synthetic test record for Pushkaralu 2027.',
     location: {
@@ -38,6 +39,7 @@ export const SAMPLE_FACILITIES = [
   {
     name: 'Kotilingala Temple Ghat (Demonstration Record)',
     category: 'GHAT',
+    photographs: ['/images/facilities/ghat-central.svg'],
     description:
       'Historic northern bathing ghat with deep waters. River safety nets and illumination towers deployed. Synthetic test record for Pushkaralu 2027.',
     location: {
@@ -76,6 +78,7 @@ export const SAMPLE_FACILITIES = [
   {
     name: 'Saraswati Ghat (Demonstration Record)',
     category: 'GHAT',
+    photographs: ['/images/facilities/ghat-central.svg'],
     description:
       'Southern bathing ghat equipped with baby-feeding cubicles and changing rooms for women. Synthetic test record for Pushkaralu 2027.',
     location: {
@@ -112,6 +115,7 @@ export const SAMPLE_FACILITIES = [
   {
     name: 'Goshpada Kshetram Ghat - Kovvur (Demonstration Record)',
     category: 'GHAT',
+    photographs: ['/images/facilities/ghat-central.svg'],
     description:
       'Primary western-bank bathing ghat in Kovvur town across the river. Synthetic test record for Pushkaralu 2027.',
     location: {
@@ -148,6 +152,7 @@ export const SAMPLE_FACILITIES = [
   {
     name: 'Pushkar Ghat Bio-Toilets Cluster A (Demonstration Record)',
     category: 'TOILET',
+    photographs: ['/images/facilities/bio-toilets.svg'],
     description:
       'High-capacity 40-seat automated bio-toilet complex with dedicated male, female, and accessible cubicles. Synthetic test record.',
     location: {
@@ -183,6 +188,7 @@ export const SAMPLE_FACILITIES = [
   {
     name: 'Kotilingala Mobile Toilets Complex (Demonstration Record)',
     category: 'TOILET',
+    photographs: ['/images/facilities/bio-toilets.svg'],
     description:
       '20-unit trailer-mounted mobile sanitation unit. Synthetic test record for Pushkaralu 2027.',
     location: {
@@ -218,6 +224,7 @@ export const SAMPLE_FACILITIES = [
   {
     name: 'Pushkar Ghat RO Drinking Water Kiosk #1 (Demonstration Record)',
     category: 'DRINKING_WATER',
+    photographs: ['/images/facilities/drinking-water.svg'],
     description:
       'Continuous chilled Reverse Osmosis (RO) purified drinking water dispensing station with 12 stainless steel taps. Synthetic test record.',
     location: {
@@ -253,6 +260,7 @@ export const SAMPLE_FACILITIES = [
   {
     name: 'Saraswati Ghat Water Distribution Point (Demonstration Record)',
     category: 'DRINKING_WATER',
+    photographs: ['/images/facilities/drinking-water.svg'],
     description:
       'Packaged water bottle distribution and refill counter managed by volunteer scouts. Synthetic test record.',
     location: {
@@ -288,6 +296,7 @@ export const SAMPLE_FACILITIES = [
   {
     name: 'Central Riverfront 24x7 Medical Camp (Demonstration Record)',
     category: 'MEDICAL',
+    photographs: ['/images/facilities/medical-camp.svg'],
     description:
       'Fully equipped 20-bed emergency triage facility with doctors, cardiac monitors, oxygen supplies, and 2 stationed ALS ambulances. Synthetic test record.',
     location: {
@@ -324,6 +333,7 @@ export const SAMPLE_FACILITIES = [
   {
     name: 'Kotilingala First Aid & ORS Booth (Demonstration Record)',
     category: 'MEDICAL',
+    photographs: ['/images/facilities/medical-camp.svg'],
     description:
       'First-aid outpost for heat stroke, minor cuts, blood pressure checks, and oral rehydration salt distribution. Synthetic test record.',
     location: {
@@ -359,6 +369,7 @@ export const SAMPLE_FACILITIES = [
   {
     name: 'Pilgrim Transit Shelter & Rest Hall 1 (Demonstration Record)',
     category: 'SHELTER',
+    photographs: ['/images/facilities/pilgrim-shelter.svg'],
     description:
       'Waterproof German hangar canopy with seating for 3,000 pilgrims, industrial fans, mobile charging points, and public announcement system. Synthetic test record.',
     location: {
@@ -395,6 +406,7 @@ export const SAMPLE_FACILITIES = [
   {
     name: 'Kovvur Riverfront Pilgrim Shed (Demonstration Record)',
     category: 'SHELTER',
+    photographs: ['/images/facilities/pilgrim-shelter.svg'],
     description:
       'Temporary shade shelter with drinking water access and carpeted rest area. Synthetic test record.',
     location: {
@@ -427,6 +439,7 @@ export const SAMPLE_FACILITIES = [
   {
     name: 'NDRF & SDRF River Rescue Command Post (Demonstration Record)',
     category: 'EMERGENCY',
+    photographs: ['/images/facilities/river-rescue.svg'],
     description:
       'Disaster response headquarters equipped with 8 inflatable motorized rescue boats, deep divers, sonar gear, and life buoy launchers. Synthetic test record.',
     location: {
@@ -461,6 +474,7 @@ export const SAMPLE_FACILITIES = [
   {
     name: 'Fire & Rescue Station - Pushkar Post (Demonstration Record)',
     category: 'EMERGENCY',
+    photographs: ['/images/facilities/river-rescue.svg'],
     description:
       'Stationed high-pressure fire tenders, hydraulic cutters, and rapid emergency intervention squad. Synthetic test record.',
     location: {
@@ -493,6 +507,7 @@ export const SAMPLE_FACILITIES = [
   {
     name: 'Pedestrian Holding Area & Queue Barricade (Demonstration Record)',
     category: 'ROAD_ACCESS',
+    photographs: ['/images/facilities/bridge-access.svg'],
     description:
       'Organized zigzag crowd holding barricade with mist-cooling system, overhead shade mesh, and safe dispersal routes. Synthetic test record.',
     location: {
@@ -534,6 +549,7 @@ export const SAMPLE_ISSUES = [
     description:
       'Motor pump has failed causing water outage in mobile toilets cluster 2. Sanitation volunteers are using backup manual drums. Requires municipal electrical contractor.',
     category: 'WATER_UNAVAILABLE',
+    photographs: ['/images/facilities/default-facility.svg'],
     location: {
       type: 'Point',
       coordinates: [81.7812, 17.0138]
@@ -580,6 +596,7 @@ export const SAMPLE_ISSUES = [
     description:
       'The left support handrail of the disabled accessibility ramp has come loose near the lower landing. Potential hazard for elderly pilgrims.',
     category: 'DAMAGED_INFRASTRUCTURE',
+    photographs: ['/images/facilities/default-facility.svg'],
     location: {
       type: 'Point',
       coordinates: [81.7745, 17.0005]
@@ -614,6 +631,7 @@ export const SAMPLE_ISSUES = [
     description:
       'Unscheduled food distribution stall causing bottleneck in designated pedestrian dispersal lane. Needs police crowd marshal intervention.',
     category: 'BLOCKED_PEDESTRIAN_ROUTE',
+    photographs: ['/images/facilities/default-facility.svg'],
     location: {
       type: 'Point',
       coordinates: [81.7735, 16.9985]

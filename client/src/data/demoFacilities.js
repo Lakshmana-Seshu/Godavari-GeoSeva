@@ -9,6 +9,7 @@ export const DEMO_FACILITIES = [
     _id: 'demo-ghat-01',
     name: 'Pushkar Ghat Central',
     category: 'GHAT',
+    photographs: ['/images/facilities/ghat-central.svg'],
     description:
       'Major river bathing ghat with dedicated safety barricades, stepped stone access, and life-jacket stations. Key pilgrim facility for Godavari Pushkaralu 2027.',
     location: {
@@ -47,6 +48,7 @@ export const DEMO_FACILITIES = [
     _id: 'demo-ghat-02',
     name: 'Kotilingala Temple Ghat',
     category: 'GHAT',
+    photographs: ['/images/facilities/ghat-central.svg'],
     description:
       'Historic northern bathing ghat with deep waters. River safety nets and illumination towers deployed. Key pilgrim facility for Godavari Pushkaralu 2027.',
     location: {
@@ -87,6 +89,7 @@ export const DEMO_FACILITIES = [
     _id: 'demo-ghat-03',
     name: 'Saraswati Ghat',
     category: 'GHAT',
+    photographs: ['/images/facilities/ghat-central.svg'],
     description:
       'Southern bathing ghat equipped with baby-feeding cubicles and changing rooms for women. Key pilgrim facility for Godavari Pushkaralu 2027.',
     location: {
@@ -125,6 +128,7 @@ export const DEMO_FACILITIES = [
     _id: 'demo-ghat-04',
     name: 'Goshpada Kshetram Ghat - Kovvur',
     category: 'GHAT',
+    photographs: ['/images/facilities/ghat-central.svg'],
     description:
       'Primary western-bank bathing ghat in Kovvur town across the river. Key pilgrim facility for Godavari Pushkaralu 2027.',
     location: {
@@ -163,6 +167,7 @@ export const DEMO_FACILITIES = [
     _id: 'demo-ghat-05',
     name: 'Markandeya Ghat Safety Area',
     category: 'GHAT',
+    photographs: ['/images/facilities/ghat-central.svg'],
     description:
       'Central ghat with shallow water bathing zones, barricaded river railings, and dedicated volunteer life-guard posts.',
     location: {
@@ -200,6 +205,7 @@ export const DEMO_FACILITIES = [
     _id: 'demo-toilet-01',
     name: 'Pushkar Ghat Bio-Toilets Cluster A',
     category: 'TOILET',
+    photographs: ['/images/facilities/bio-toilets.svg'],
     description:
       'High-capacity 40-seat automated bio-toilet complex with dedicated male, female, and accessible cubicles. Synthetic test record.',
     location: {
@@ -237,6 +243,7 @@ export const DEMO_FACILITIES = [
     _id: 'demo-toilet-02',
     name: 'Kotilingala Mobile Toilets Complex',
     category: 'TOILET',
+    photographs: ['/images/facilities/bio-toilets.svg'],
     description:
       '20-unit trailer-mounted mobile sanitation unit. Key pilgrim facility for Godavari Pushkaralu 2027.',
     location: {
@@ -274,6 +281,7 @@ export const DEMO_FACILITIES = [
     _id: 'demo-toilet-03',
     name: 'Kovvur Goshpada Kshetram Public Toilets',
     category: 'TOILET',
+    photographs: ['/images/facilities/bio-toilets.svg'],
     description:
       'Newly constructed municipal sanitation block with running water and 24-hour maintenance team.',
     location: {
@@ -309,6 +317,7 @@ export const DEMO_FACILITIES = [
     _id: 'demo-water-01',
     name: 'Pushkar Ghat RO Drinking Water Kiosk #1',
     category: 'DRINKING_WATER',
+    photographs: ['/images/facilities/drinking-water.svg'],
     description:
       'Continuous chilled Reverse Osmosis (RO) purified drinking water dispensing station with 12 stainless steel taps. Synthetic test record.',
     location: {
@@ -346,6 +355,7 @@ export const DEMO_FACILITIES = [
     _id: 'demo-water-02',
     name: 'Saraswati Ghat Water Distribution Point',
     category: 'DRINKING_WATER',
+    photographs: ['/images/facilities/drinking-water.svg'],
     description:
       'Packaged water bottle distribution and refill counter managed by volunteer scouts. Synthetic test record.',
     location: {
@@ -383,6 +393,7 @@ export const DEMO_FACILITIES = [
     _id: 'demo-water-03',
     name: 'Kovvur River Approach RO Drinking Water Center',
     category: 'DRINKING_WATER',
+    photographs: ['/images/facilities/drinking-water.svg'],
     description:
       'High-capacity clean water hub with 10 automated push-button faucets and paper cups.',
     location: {
@@ -417,6 +428,7 @@ export const DEMO_FACILITIES = [
     _id: 'demo-med-01',
     name: 'Central Riverfront 24x7 Medical Camp',
     category: 'MEDICAL',
+    photographs: ['/images/facilities/medical-camp.svg'],
     description:
       'Fully equipped 20-bed emergency triage facility with doctors, cardiac monitors, oxygen supplies, and 2 stationed ALS ambulances. Synthetic test record.',
     location: {
@@ -455,6 +467,7 @@ export const DEMO_FACILITIES = [
     _id: 'demo-med-02',
     name: 'Kotilingala First Aid & ORS Booth',
     category: 'MEDICAL',
+    photographs: ['/images/facilities/medical-camp.svg'],
     description:
       'First-aid outpost for heat stroke, minor cuts, blood pressure checks, and oral rehydration salt distribution. Synthetic test record.',
     location: {
@@ -492,6 +505,7 @@ export const DEMO_FACILITIES = [
     _id: 'demo-med-03',
     name: 'Kovvur Goshpada Primary Health Outpost',
     category: 'MEDICAL',
+    photographs: ['/images/facilities/medical-camp.svg'],
     description:
       'Western bank medical center with paramedical staff, emergency splints, and an on-call 108 ambulance.',
     location: {
@@ -528,6 +542,7 @@ export const DEMO_FACILITIES = [
     _id: 'demo-shelter-01',
     name: 'Pilgrim Transit Shelter & Rest Hall 1',
     category: 'SHELTER',
+    photographs: ['/images/facilities/pilgrim-shelter.svg'],
     description:
       'Waterproof German hangar canopy with seating for 3,000 pilgrims, industrial fans, mobile charging points, and public announcement system. Synthetic test record.',
     location: {
@@ -566,6 +581,7 @@ export const DEMO_FACILITIES = [
     _id: 'demo-shelter-02',
     name: 'Kovvur Riverfront Pilgrim Shed',
     category: 'SHELTER',
+    photographs: ['/images/facilities/pilgrim-shelter.svg'],
     description:
       'Temporary shade shelter with drinking water access and carpeted rest area. Synthetic test record.',
     location: {
@@ -600,6 +616,7 @@ export const DEMO_FACILITIES = [
     _id: 'demo-emerg-01',
     name: 'NDRF & SDRF River Rescue Command Post',
     category: 'EMERGENCY',
+    photographs: ['/images/facilities/river-rescue.svg'],
     description:
       'Disaster response headquarters equipped with 8 inflatable motorized rescue boats, deep divers, sonar gear, and life buoy launchers. Synthetic test record.',
     location: {
@@ -636,6 +653,7 @@ export const DEMO_FACILITIES = [
     _id: 'demo-emerg-02',
     name: 'Fire & Rescue Station - Pushkar Post',
     category: 'EMERGENCY',
+    photographs: ['/images/facilities/river-rescue.svg'],
     description:
       'Stationed high-pressure fire tenders, hydraulic cutters, and rapid emergency intervention squad. Synthetic test record.',
     location: {
@@ -670,6 +688,7 @@ export const DEMO_FACILITIES = [
     _id: 'demo-road-01',
     name: 'Pedestrian Holding Area & Queue Barricade',
     category: 'ROAD_ACCESS',
+    photographs: ['/images/facilities/bridge-access.svg'],
     description:
       'Organized zigzag crowd holding barricade with mist-cooling system, overhead shade mesh, and safe dispersal routes. Synthetic test record.',
     location: {
@@ -707,6 +726,7 @@ export const DEMO_FACILITIES = [
     _id: 'demo-road-02',
     name: 'Godavari Rail-cum-Road Bridge Access Gate',
     category: 'ROAD_ACCESS',
+    photographs: ['/images/facilities/bridge-access.svg'],
     description:
       'Major pedestrian and authorized shuttle corridor connecting Rajamahendravaram east bank to Kovvur west bank.',
     location: {

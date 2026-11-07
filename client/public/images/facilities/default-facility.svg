@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E6F4F1" />
+      <stop offset="60%" stop-color="#C5EBE3" />
+      <stop offset="100%" stop-color="#99D9CC" />
+    </linearGradient>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#006B57" />
+      <stop offset="100%" stop-color="#004D43" />
+    </linearGradient>
+    <linearGradient id="saffronGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#004D43" flood-opacity="0.15" />
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="800" height="500" fill="url(#skyGrad)" />
+
+  <!-- Subtle Geometric Pattern Background -->
+  <circle cx="400" cy="250" r="280" fill="none" stroke="#006B57" stroke-width="1.5" stroke-dasharray="6 6" opacity="0.25" />
+  <circle cx="400" cy="250" r="210" fill="none" stroke="#006B57" stroke-width="1.5" opacity="0.3" />
+  <circle cx="400" cy="250" r="140" fill="#FFFFFF" fill-opacity="0.5" stroke="#006B57" stroke-width="2" opacity="0.4" />
+
+  <!-- Central Card Podium -->
+  <rect x="240" y="110" width="320" height="280" rx="24" fill="#FFFFFF" filter="url(#cardShadow)" />
+  <rect x="240" y="110" width="320" height="10" rx="5" fill="url(#saffronGrad)" />
+
+  <!-- Civic Infrastructure Illustration in Center -->
+  <!-- Building / Facility Badge -->
+  <rect x="330" y="150" width="140" height="120" rx="16" fill="url(#primaryGrad)" />
+  
+  <!-- Facility Symbol (Government Pillar / Building) -->
+  <!-- Roof Triangle / Pediment -->
+  <polygon points="400,165 355,195 445,195" fill="#FFFFFF" />
+  <!-- Architrave -->
+  <rect x="360" y="198" width="80" height="6" rx="2" fill="#F59E0B" />
+  <!-- Pillars -->
+  <rect x="368" y="208" width="10" height="42" rx="2" fill="#FFFFFF" opacity="0.95" />
+  <rect x="385" y="208" width="10" height="42" rx="2" fill="#FFFFFF" opacity="0.95" />
+  <rect x="405" y="208" width="10" height="42" rx="2" fill="#FFFFFF" opacity="0.95" />
+  <rect x="422" y="208" width="10" height="42" rx="2" fill="#FFFFFF" opacity="0.95" />
+  <!-- Base Plinth -->
+  <rect x="355" y="252" width="90" height="8" rx="2" fill="#FFFFFF" />
+
+  <!-- Facility Text and Badge -->
+  <text x="400" y="305" font-family="'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="20" fill="#004D43" text-anchor="middle">
+    GODAVARI CIVIC FACILITY
+  </text>
+  <text x="400" y="330" font-family="'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="13" fill="#6B7280" text-anchor="middle">
+    Rajamahendravaram – Kovvur Pushkaralu 2027
+  </text>
+
+  <!-- Tag Pill -->
+  <rect x="335" y="348" width="130" height="26" rx="13" fill="#E6F4F1" stroke="#006B57" stroke-width="1" />
+  <circle cx="350" cy="361" r="4" fill="#059669" />
+  <text x="360" y="366" font-family="'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="11" fill="#006B57">
+    VERIFIED FACILITY
+  </text>
+
+  <!-- Bottom Saffron / Green Decorative Bar -->
+  <rect x="0" y="488" width="800" height="12" fill="url(#primaryGrad)" />
+  <rect x="0" y="484" width="800" height="4" fill="url(#saffronGrad)" />
+</svg>

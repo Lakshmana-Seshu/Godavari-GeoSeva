@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="medBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#9f1239"/>
+      <stop offset="50%" stop-color="#e11d48"/>
+      <stop offset="100%" stop-color="#ffe4e6"/>
+    </linearGradient>
+    <linearGradient id="tentWhite" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="50%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#medBg)"/>
+
+  <!-- Ground Pavement -->
+  <rect y="390" width="800" height="110" fill="#881337" opacity="0.3"/>
+  <line x1="0" y1="390" x2="800" y2="390" stroke="#fda4af" stroke-width="3"/>
+
+  <!-- Medical Emergency Tent / Hospital Canopy -->
+  <polygon points="100,120 700,120 760,200 40,200" fill="#ffffff" stroke="#e11d48" stroke-width="4"/>
+  <rect x="40" y="200" width="720" height="190" fill="url(#tentWhite)" stroke="#e11d48" stroke-width="4"/>
+
+  <!-- Red Cross Emblem on Canopy -->
+  <circle cx="400" cy="160" r="32" fill="#e11d48" stroke="#ffffff" stroke-width="3"/>
+  <rect x="390" y="138" width="20" height="44" fill="#ffffff" rx="2"/>
+  <rect x="378" y="150" width="44" height="20" fill="#ffffff" rx="2"/>
+
+  <!-- Tent Entrance -->
+  <path d="M 320 390 L 320 250 Q 400 220 480 250 L 480 390 Z" fill="#e11d48" opacity="0.12" stroke="#e11d48" stroke-width="3"/>
+
+  <!-- 108 Emergency Ambulance Vehicle parked on right -->
+  <g>
+    <!-- Ambulance Body -->
+    <rect x="520" y="270" width="220" height="100" rx="8" fill="#ffffff" stroke="#e11d48" stroke-width="3"/>
+    <rect x="680" y="290" width="60" height="50" fill="#38bdf8" opacity="0.4" rx="4"/>
+    <!-- Red Stripe -->
+    <rect x="520" y="320" width="220" height="16" fill="#e11d48"/>
+    <!-- Wheels -->
+    <circle cx="560" cy="375" r="22" fill="#1e293b" stroke="#ffffff" stroke-width="3"/>
+    <circle cx="680" cy="375" r="22" fill="#1e293b" stroke="#ffffff" stroke-width="3"/>
+    <!-- Red Cross on Ambulance -->
+    <rect x="590" y="285" width="10" height="24" fill="#e11d48"/>
+    <rect x="583" y="292" width="24" height="10" fill="#e11d48"/>
+    <!-- 108 Emergency Text -->
+    <text x="620" y="306" font-family="'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="900" fill="#e11d48">108</text>
+    <!-- Beacon Flasher on top -->
+    <rect x="670" y="258" width="24" height="12" fill="#ef4444" rx="3"/>
+    <circle cx="682" cy="264" r="16" fill="#f87171" opacity="0.4"/>
+  </g>
+
+  <!-- Doctor &amp; Stretcher Station on left -->
+  <g>
+    <!-- Stretcher Bed -->
+    <rect x="140" y="330" width="140" height="16" rx="4" fill="#64748b"/>
+    <line x1="160" y1="346" x2="160" y2="390" stroke="#334155" stroke-width="4"/>
+    <line x1="260" y1="346" x2="260" y2="390" stroke="#334155" stroke-width="4"/>
+    <!-- Pillow -->
+    <rect x="145" y="324" width="26" height="12" rx="3" fill="#ffffff" stroke="#cbd5e1"/>
+    <!-- Oxygen Cylinder -->
+    <rect x="100" y="280" width="22" height="90" rx="10" fill="#0284c7" stroke="#0369a1" stroke-width="2"/>
+    <circle cx="111" cy="275" r="6" fill="#64748b"/>
+    <!-- IV Drip Stand -->
+    <line x1="295" y1="260" x2="295" y2="390" stroke="#64748b" stroke-width="3"/>
+    <circle cx="295" cy="265" r="10" fill="#ffffff" stroke="#38bdf8" stroke-width="2"/>
+  </g>
+
+  <!-- Heatstroke &amp; ORS Distribution Counter Sign -->
+  <rect x="330" y="250" width="140" height="32" rx="6" fill="#10b981"/>
+  <text x="342" y="271" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#ffffff">ORS &amp; FIRST AID</text>
+
+  <!-- Facility Title Watermark -->
+  <rect x="24" y="24" width="280" height="38" rx="8" fill="#881337" opacity="0.9"/>
+  <text x="36" y="48" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">24x7 MEDICAL ASSISTANCE CAMP</text>
+</svg>

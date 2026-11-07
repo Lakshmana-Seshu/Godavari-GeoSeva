@@ -22,7 +22,12 @@ import { CategoryBadge } from '../components/common/CategoryBadge';
 import { FacilityFormModal } from '../components/facilities/FacilityFormModal';
 import { FacilityDetailModal } from '../components/facilities/FacilityDetailModal';
 import { LoadingSpinner } from '../components/common/LoadingSpinner';
-import { formatDateTime, CATEGORY_METADATA } from '../utils/formatters';
+import {
+  formatDateTime,
+  CATEGORY_METADATA,
+  getFacilityImage,
+  CATEGORY_DEFAULT_IMAGES,
+} from '../utils/formatters';
 
 export const FacilityManagement = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -252,7 +257,7 @@ export const FacilityManagement = () => {
             <table className="w-full text-left text-xs border-collapse">
               <thead>
                 <tr className="bg-slate-50 border-b border-slate-200 text-slate-500 uppercase tracking-wider font-semibold">
-                  <th className="py-3 px-4">Facility & Locality</th>
+                  <th className="py-3 px-4">Photo & Facility</th>
                   <th className="py-3 px-4">Category</th>
                   <th className="py-3 px-4">Operational Status</th>
                   <th className="py-3 px-4">Verification</th>
@@ -263,22 +268,54 @@ export const FacilityManagement = () => {
               </thead>
               <tbody className="divide-y divide-slate-100">
                 {facilities.map((fac) => {
-                  const [lng, lat] = fac.location.coordinates;
+                  const [lng, lat] = fac.location?.coordinates || [81.7770, 17.0028];
+                  const photoSrc = getFacilityImage(fac);
                   return (
                     <tr key={fac._id} className="hover:bg-slate-50/80 transition-colors">
                       <td className="py-3 px-4">
-                        <strong className="block text-slate-900 font-bold text-sm">
-                          {fac.name}
-                        </strong>
-                        <span className="text-[11px] text-slate-500 flex items-center gap-1 mt-0.5">
-                          <MapPin className="w-3 h-3 text-slate-400" />
-                          {fac.address || 'Godavari Corridor'}
-                        </span>
-                        {fac.dataSource === 'SYNTHETIC_DEMO' && (
-                          <span className="inline-block mt-1 text-[9px] font-bold text-amber-700 bg-amber-50 px-1.5 py-0.2 rounded border border-amber-200">
-                            Demo Data
-                          </span>
-                        )}
+                        <div className="flex items-center gap-3">
+                          <button
+                            type="button"
+                            onClick={() => setDetailFacility(fac)}
+                            className="relative w-14 h-12 rounded-lg overflow-hidden border border-slate-200 flex-shrink-0 group cursor-pointer shadow-2xs hover:ring-2 hover:ring-teal-600 transition-all bg-slate-100"
+                            title="Click to view facility photo"
+                          >
+                            <img
+                              src={photoSrc}
+                              alt={fac.name}
+                              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                              onError={(e) => {
+                                const fallback =
+                                  CATEGORY_DEFAULT_IMAGES[fac?.category?.toUpperCase()] ||
+                                  '/images/facilities/default-facility.svg';
+                                if (e.target.src !== fallback) {
+                                  e.target.src = fallback;
+                                }
+                              }}
+                            />
+                            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                              <Eye className="w-3.5 h-3.5 text-white opacity-0 group-hover:opacity-100 drop-shadow transition-opacity" />
+                            </div>
+                          </button>
+                          <div className="min-w-0">
+                            <button
+                              type="button"
+                              onClick={() => setDetailFacility(fac)}
+                              className="text-left font-bold text-slate-900 text-sm hover:text-teal-800 transition-colors block truncate max-w-xs"
+                            >
+                              {fac.name}
+                            </button>
+                            <span className="text-[11px] text-slate-500 flex items-center gap-1 mt-0.5 truncate max-w-xs">
+                              <MapPin className="w-3 h-3 text-slate-400 flex-shrink-0" />
+                              <span className="truncate">{fac.address || 'Godavari Corridor'}</span>
+                            </span>
+                            {fac.dataSource === 'SYNTHETIC_DEMO' && (
+                              <span className="inline-block mt-1 text-[9px] font-bold text-amber-700 bg-amber-50 px-1.5 py-0.2 rounded border border-amber-200">
+                                Demo Data
+                              </span>
+                            )}
+                          </div>
+                        </div>
                       </td>
 
                       <td className="py-3 px-4">

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="rescueBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#991b1b"/>
+      <stop offset="40%" stop-color="#dc2626"/>
+      <stop offset="70%" stop-color="#ea580c"/>
+      <stop offset="100%" stop-color="#fed7aa"/>
+    </linearGradient>
+    <linearGradient id="deepRiver" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0e7490"/>
+      <stop offset="50%" stop-color="#155e75"/>
+      <stop offset="100%" stop-color="#164e63"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="800" height="260" fill="url(#rescueBg)"/>
+
+  <!-- Water -->
+  <rect y="260" width="800" height="240" fill="url(#deepRiver)"/>
+
+  <!-- Water Waves -->
+  <g stroke="#67e8f9" stroke-width="2.5" opacity="0.6" stroke-linecap="round">
+    <path d="M 0 300 Q 50 290 100 300 T 200 300 T 300 300 T 400 300 T 500 300 T 600 300 T 700 300 T 800 300" fill="none"/>
+    <path d="M 40 340 Q 90 330 140 340 T 240 340 T 340 340 T 440 340 T 540 340 T 640 340 T 740 340" fill="none"/>
+    <path d="M 0 400 Q 60 390 120 400 T 240 400 T 360 400 T 480 400 T 600 400 T 720 400 T 800 400" fill="none"/>
+  </g>
+
+  <!-- NDRF/SDRF Inflatable Motor Rescue Speedboat -->
+  <g>
+    <!-- Boat Hull -->
+    <path d="M 280 340 L 520 340 L 580 380 L 220 380 Z" fill="#ea580c" stroke="#ffffff" stroke-width="4"/>
+    <ellipse cx="400" cy="380" rx="190" ry="24" fill="#c2410c"/>
+    <!-- Pontoon Tubes -->
+    <path d="M 200 370 Q 180 375 220 385 L 580 385 Q 610 375 580 365 Z" fill="#7c2d12"/>
+    <!-- Outboard Motor -->
+    <rect x="180" y="330" width="30" height="60" fill="#1e293b" rx="4"/>
+    <rect x="170" y="340" width="15" height="10" fill="#f59e0b"/>
+    <!-- Steering Console &amp; Radio Antenna -->
+    <rect x="360" y="310" width="40" height="40" fill="#334155" rx="4"/>
+    <line x1="390" y1="310" x2="390" y2="230" stroke="#f8fafc" stroke-width="3"/>
+    <circle cx="390" cy="225" r="6" fill="#ef4444"/>
+    <!-- Orange Life Ring / Buoy -->
+    <circle cx="480" cy="345" r="20" fill="#f97316" stroke="#ffffff" stroke-width="6"/>
+    <circle cx="480" cy="345" r="10" fill="#155e75"/>
+    <!-- Life Jackets Array -->
+    <rect x="420" y="335" width="22" height="26" fill="#f59e0b" rx="3" stroke="#ffffff" stroke-width="1.5"/>
+    <rect x="445" y="335" width="22" height="26" fill="#f59e0b" rx="3" stroke="#ffffff" stroke-width="1.5"/>
+  </g>
+
+  <!-- Command Watchtower &amp; Searchlight on Riverbank -->
+  <g>
+    <rect x="40" y="140" width="160" height="180" fill="#1e293b" rx="8" stroke="#ef4444" stroke-width="3"/>
+    <polygon points="20,140 220,140 120,80" fill="#b91c1c"/>
+    <rect x="60" y="160" width="120" height="40" fill="#f8fafc" rx="4"/>
+    <text x="75" y="185" font-family="'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="900" fill="#b91c1c">SDRF RESCUE</text>
+    <!-- Siren Flasher -->
+    <circle cx="120" cy="74" r="12" fill="#ef4444"/>
+    <circle cx="120" cy="74" r="28" fill="#fca5a5" opacity="0.4"/>
+  </g>
+
+  <!-- Facility Title Watermark -->
+  <rect x="24" y="24" width="310" height="38" rx="8" fill="#7f1d1d" opacity="0.9"/>
+  <text x="36" y="48" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">DISASTER RESCUE &amp; SAFETY POST</text>
+</svg>

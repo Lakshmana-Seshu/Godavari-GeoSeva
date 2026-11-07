@@ -27,6 +27,8 @@ import {
   formatAccessibility,
   formatContact,
   getFacilityCoordinates,
+  getFacilityImage,
+  CATEGORY_DEFAULT_IMAGES,
 } from '../utils/formatters';
 
 export const FacilityDetails = () => {
@@ -110,33 +112,52 @@ export const FacilityDetails = () => {
       </div>
 
       {/* Main Details Card */}
-      <div className="bg-white rounded-2xl border border-slate-200/90 shadow-card p-6 sm:p-8 space-y-6">
-        <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
-          <div className="space-y-2">
-            <div className="flex flex-wrap items-center gap-2">
-              <CategoryBadge category={facility.category} />
-              <StatusBadge status={facility.operationalStatus} />
-              <VerificationBadge status={facility.verificationStatus} />
+      <div className="bg-white rounded-2xl border border-slate-200/90 shadow-card overflow-hidden">
+        {/* Facility Photograph Hero */}
+        <div className="relative h-64 sm:h-80 w-full bg-slate-900 overflow-hidden">
+          <img
+            src={getFacilityImage(facility)}
+            alt={facility.name}
+            className="w-full h-full object-cover"
+            onError={(e) => {
+              const fallback =
+                CATEGORY_DEFAULT_IMAGES[facility?.category?.toUpperCase()] ||
+                '/images/facilities/default-facility.svg';
+              if (e.target.src !== fallback) {
+                e.target.src = fallback;
+              }
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/30 to-transparent" />
+          <div className="absolute bottom-6 left-6 right-6 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+            <div className="text-white space-y-1.5">
+              <div className="flex flex-wrap items-center gap-2">
+                <CategoryBadge category={facility.category} />
+                <StatusBadge status={facility.operationalStatus} />
+                <VerificationBadge status={facility.verificationStatus} />
+              </div>
+              <h1 className="text-2xl sm:text-3xl font-black text-white tracking-tight drop-shadow-sm">
+                {facility.name}
+              </h1>
+              <p className="text-xs text-slate-200 flex items-center gap-1.5 drop-shadow-xs">
+                <MapPin className="w-4 h-4 text-teal-300" />
+                {facility.address || 'Godavari River Sector, Rajamahendravaram'}
+              </p>
             </div>
-            <h1 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
-              {facility.name}
-            </h1>
-            <p className="text-xs text-slate-500 flex items-center gap-1.5">
-              <MapPin className="w-4 h-4 text-slate-400" />
-              {facility.address || 'Godavari River Sector, Rajamahendravaram'}
-            </p>
-          </div>
 
-          <a
-            href={`https://www.openstreetmap.org/directions?engine=fossgis_osrm_foot&route=%3B${lat}%2C${lng}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-5 py-2.5 bg-teal-800 text-white rounded-xl text-xs font-bold hover:bg-teal-900 transition-colors shadow-sm self-start"
-          >
-            <Navigation className="w-4 h-4 text-saffron-400" />
-            Navigate on OpenStreetMap
-          </a>
+            <a
+              href={`https://www.openstreetmap.org/directions?engine=fossgis_osrm_foot&route=%3B${lat}%2C${lng}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-5 py-2.5 bg-teal-800 text-white rounded-xl text-xs font-bold hover:bg-teal-900 transition-colors shadow-sm self-start sm:self-auto border border-teal-600/30"
+            >
+              <Navigation className="w-4 h-4 text-saffron-400" />
+              Navigate on OpenStreetMap
+            </a>
+          </div>
         </div>
+
+        <div className="p-6 sm:p-8 space-y-6">
 
         {/* Demo banner */}
         {isDemo && (
@@ -221,5 +242,6 @@ export const FacilityDetails = () => {
         </div>
       </div>
     </div>
-  );
+  </div>
+);
 };

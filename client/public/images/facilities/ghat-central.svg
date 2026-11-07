@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skyGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f766e"/>
+      <stop offset="45%" stop-color="#14b8a6"/>
+      <stop offset="80%" stop-color="#fef08a"/>
+      <stop offset="100%" stop-color="#fed7aa"/>
+    </linearGradient>
+    <linearGradient id="riverGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0d9488"/>
+      <stop offset="40%" stop-color="#0f766e"/>
+      <stop offset="100%" stop-color="#115e59"/>
+    </linearGradient>
+    <linearGradient id="stoneSteps" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e2e8f0"/>
+      <stop offset="50%" stop-color="#cbd5e1"/>
+      <stop offset="100%" stop-color="#94a3b8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="800" height="260" fill="url(#skyGrad1)"/>
+
+  <!-- Morning Sun -->
+  <circle cx="580" cy="140" r="70" fill="#f59e0b" opacity="0.85"/>
+  <circle cx="580" cy="140" r="90" fill="#fef08a" opacity="0.3"/>
+
+  <!-- Distant Bridge Arches -->
+  <g stroke="#042f2e" stroke-width="3" fill="none" opacity="0.45">
+    <line x1="0" y1="210" x2="800" y2="210" stroke-width="4"/>
+    <path d="M 0 210 Q 50 160 100 210 Q 150 160 200 210 Q 250 160 300 210 Q 350 160 400 210 Q 450 160 500 210 Q 550 160 600 210 Q 650 160 700 210 Q 750 160 800 210"/>
+  </g>
+
+  <!-- Godavari River -->
+  <rect y="210" width="800" height="150" fill="url(#riverGrad1)"/>
+
+  <!-- Water Reflections -->
+  <g stroke="#99f6e4" stroke-width="2" opacity="0.6" stroke-linecap="round">
+    <line x1="120" y1="230" x2="220" y2="230"/>
+    <line x1="340" y1="240" x2="480" y2="240"/>
+    <line x1="520" y1="225" x2="680" y2="225"/>
+    <line x1="80" y1="260" x2="280" y2="260"/>
+    <line x1="420" y1="270" x2="640" y2="270"/>
+    <line x1="260" y1="290" x2="520" y2="290"/>
+  </g>
+
+  <!-- Safety Floating Buoys in River -->
+  <g fill="#ef4444" stroke="#ffffff" stroke-width="2">
+    <circle cx="200" cy="280" r="10"/>
+    <circle cx="320" cy="285" r="10"/>
+    <circle cx="440" cy="282" r="10"/>
+    <circle cx="560" cy="287" r="10"/>
+    <circle cx="680" cy="283" r="10"/>
+    <path d="M 200 280 Q 260 295 320 285 T 440 282 T 560 287 T 680 283" fill="none" stroke="#f59e0b" stroke-width="3" stroke-dasharray="6,4"/>
+  </g>
+
+  <!-- Ghat Stepped Stone Terrace -->
+  <polygon points="0,320 800,320 800,350 0,350" fill="url(#stoneSteps)"/>
+  <polygon points="0,350 800,350 800,390 0,390" fill="#94a3b8"/>
+  <polygon points="0,390 800,390 800,440 0,440" fill="#cbd5e1"/>
+  <polygon points="0,440 800,440 800,500 0,500" fill="#e2e8f0"/>
+
+  <!-- Step Dividing Grooves -->
+  <line x1="0" y1="350" x2="800" y2="350" stroke="#64748b" stroke-width="2"/>
+  <line x1="0" y1="390" x2="800" y2="390" stroke="#64748b" stroke-width="2"/>
+  <line x1="0" y1="440" x2="800" y2="440" stroke="#64748b" stroke-width="2"/>
+
+  <!-- Safety Handrails &amp; Steel Barricades -->
+  <g stroke="#0f766e" stroke-width="4" fill="none">
+    <line x1="80" y1="310" x2="80" y2="390"/>
+    <line x1="220" y1="310" x2="220" y2="390"/>
+    <line x1="360" y1="310" x2="360" y2="390"/>
+    <line x1="500" y1="310" x2="500" y2="390"/>
+    <line x1="640" y1="310" x2="640" y2="390"/>
+    <line x1="80" y1="330" x2="720" y2="330" stroke-width="5"/>
+    <line x1="80" y1="360" x2="720" y2="360" stroke-width="5"/>
+  </g>
+
+  <!-- Pushkaralu Festive Pennants &amp; Flags -->
+  <g>
+    <line x1="120" y1="310" x2="120" y2="240" stroke="#042f2e" stroke-width="3"/>
+    <polygon points="120,240 160,255 120,270" fill="#f59e0b"/>
+    <line x1="680" y1="310" x2="680" y2="240" stroke="#042f2e" stroke-width="3"/>
+    <polygon points="680,240 720,255 680,270" fill="#0d9488"/>
+  </g>
+
+  <!-- High-Mast Illumination Tower -->
+  <line x1="740" y1="350" x2="740" y2="120" stroke="#334155" stroke-width="5"/>
+  <polygon points="720,120 760,120 740,100" fill="#f59e0b"/>
+  <circle cx="740" cy="115" r="16" fill="#fef08a" opacity="0.8"/>
+
+  <!-- Facility Title Watermark Badge -->
+  <rect x="24" y="24" width="220" height="38" rx="8" fill="#042f2e" opacity="0.85"/>
+  <text x="36" y="48" font-family="'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">PUSHKAR GHAT CENTRAL</text>
+</svg>

@@ -231,3 +231,35 @@ export const isValidGoogleKey = (key) =>
       !key.includes('your_google_maps') &&
       !key.includes('placeholder')
   );
+
+export const CATEGORY_DEFAULT_IMAGES = {
+  GHAT: '/images/facilities/ghat-central.svg',
+  TOILET: '/images/facilities/bio-toilets.svg',
+  DRINKING_WATER: '/images/facilities/drinking-water.svg',
+  MEDICAL: '/images/facilities/medical-camp.svg',
+  SHELTER: '/images/facilities/pilgrim-shelter.svg',
+  EMERGENCY: '/images/facilities/river-rescue.svg',
+  ROAD_ACCESS: '/images/facilities/bridge-access.svg',
+  OTHER: '/images/facilities/default-facility.svg',
+};
+
+export const getFacilityImage = (facility) => {
+  if (!facility) return '/images/facilities/default-facility.svg';
+
+  if (Array.isArray(facility.photographs) && facility.photographs.length > 0 && facility.photographs[0]) {
+    return facility.photographs[0];
+  }
+  if (facility.imageUrl) {
+    return facility.imageUrl;
+  }
+  if (facility.photo) {
+    return facility.photo;
+  }
+  if (facility.image) {
+    return facility.image;
+  }
+
+  const category = (facility.category || '').toUpperCase();
+  return CATEGORY_DEFAULT_IMAGES[category] || '/images/facilities/default-facility.svg';
+};
+

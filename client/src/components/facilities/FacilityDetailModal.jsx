@@ -25,6 +25,8 @@ import {
   formatAccessibility,
   formatContact,
   getFacilityCoordinates,
+  getFacilityImage,
+  CATEGORY_DEFAULT_IMAGES,
 } from '../../utils/formatters';
 
 export const FacilityDetailModal = ({ facility, onClose, userLocation = null }) => {
@@ -52,27 +54,44 @@ export const FacilityDetailModal = ({ facility, onClose, userLocation = null }) 
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs animate-in fade-in duration-200">
-      <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200">
-        {/* Modal Header */}
-        <div className="p-6 border-b border-slate-100 flex items-start justify-between gap-4 sticky top-0 bg-white/95 backdrop-blur-md z-10">
-          <div>
+      <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200 overflow-hidden">
+        {/* Modal Hero Image Banner */}
+        <div className="relative h-48 sm:h-56 w-full bg-slate-900 overflow-hidden">
+          <img
+            src={getFacilityImage(facility)}
+            alt={facility.name}
+            className="w-full h-full object-cover"
+            onError={(e) => {
+              const fallback =
+                CATEGORY_DEFAULT_IMAGES[facility?.category?.toUpperCase()] ||
+                '/images/facilities/default-facility.svg';
+              if (e.target.src !== fallback) {
+                e.target.src = fallback;
+              }
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/30 to-slate-950/20" />
+
+          <button
+            onClick={onClose}
+            className="absolute top-4 right-4 p-2 rounded-full bg-black/50 hover:bg-black/75 text-white backdrop-blur-xs transition-colors z-10 cursor-pointer shadow-md"
+            title="Close"
+          >
+            <X className="w-5 h-5" />
+          </button>
+
+          <div className="absolute bottom-4 left-6 right-6">
             <div className="flex flex-wrap items-center gap-2 mb-2">
               <CategoryBadge category={facility.category} />
               <StatusBadge status={facility.operationalStatus} />
               <VerificationBadge status={facility.verificationStatus} />
             </div>
-            <h2 className="text-xl font-bold text-slate-900">{facility.name}</h2>
-            <p className="text-xs text-slate-500 flex items-center gap-1.5 mt-1">
-              <MapPin className="w-3.5 h-3.5 text-slate-400" />
+            <h2 className="text-xl sm:text-2xl font-bold text-white drop-shadow-sm">{facility.name}</h2>
+            <p className="text-xs text-slate-200 flex items-center gap-1.5 mt-1 drop-shadow-xs">
+              <MapPin className="w-3.5 h-3.5 text-teal-300" />
               {facility.address || 'Rajamahendravaram - Kovvur Corridor'}
             </p>
           </div>
-          <button
-            onClick={onClose}
-            className="p-2 rounded-full hover:bg-slate-100 text-slate-400 hover:text-slate-600 transition-colors"
-          >
-            <X className="w-5 h-5" />
-          </button>
         </div>
 
         {/* Modal Body */}

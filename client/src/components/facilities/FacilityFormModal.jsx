@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { X, Save, MapPin, Locate, AlertCircle, Info } from 'lucide-react';
-import { CATEGORY_METADATA } from '../../utils/formatters';
+import { X, Save, MapPin, Locate, AlertCircle, Info, Image as ImageIcon } from 'lucide-react';
+import { CATEGORY_METADATA, CATEGORY_DEFAULT_IMAGES } from '../../utils/formatters';
 
 export const FacilityFormModal = ({
   facility = null,
@@ -15,6 +15,7 @@ export const FacilityFormModal = ({
   const [formData, setFormData] = useState({
     name: '',
     category: 'GHAT',
+    imageUrl: '',
     description: '',
     latitude: '17.0005',
     longitude: '81.7800',
@@ -32,10 +33,16 @@ export const FacilityFormModal = ({
 
   useEffect(() => {
     if (facility) {
-      const [lng, lat] = facility.location.coordinates;
+      const [lng, lat] = facility.location?.coordinates || [81.7800, 17.0005];
+      const photo =
+        (Array.isArray(facility.photographs) && facility.photographs[0]) ||
+        facility.imageUrl ||
+        facility.photo ||
+        '';
       setFormData({
         name: facility.name || '',
         category: facility.category || 'GHAT',
+        imageUrl: photo,
         description: facility.description || '',
         latitude: lat.toString(),
         longitude: lng.toString(),
@@ -52,6 +59,7 @@ export const FacilityFormModal = ({
       setFormData({
         name: '',
         category: 'GHAT',
+        imageUrl: CATEGORY_DEFAULT_IMAGES.GHAT || '',
         description: '',
         latitude: userLocation ? userLocation.lat.toFixed(6) : '17.0005',
         longitude: userLocation ? userLocation.lng.toFixed(6) : '81.7800',
@@ -72,7 +80,16 @@ export const FacilityFormModal = ({
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    setFormData((prev) => {
+      const next = { ...prev, [name]: value };
+      if (
+        name === 'category' &&
+        (!prev.imageUrl || Object.values(CATEGORY_DEFAULT_IMAGES).includes(prev.imageUrl))
+      ) {
+        next.imageUrl = CATEGORY_DEFAULT_IMAGES[value] || '';
+      }
+      return next;
+    });
   };
 
   const useCurrentGps = () => {
@@ -106,6 +123,7 @@ export const FacilityFormModal = ({
     const payload = {
       name: formData.name.trim(),
       category: formData.category,
+      photographs: formData.imageUrl.trim() ? [formData.imageUrl.trim()] : undefined,
       description: formData.description.trim(),
       latitude: lat,
       longitude: lng,
@@ -189,6 +207,62 @@ export const FacilityFormModal = ({
                     </option>
                   ))}
                 </select>
+              </div>
+            </div>
+
+            {/* Photograph & Visual Asset */}
+            <div className="p-3.5 bg-slate-50 border border-slate-200 rounded-xl space-y-2.5">
+              <div className="flex items-center justify-between">
+                <label className="text-xs font-bold text-slate-800 flex items-center gap-1.5">
+                  <ImageIcon className="w-3.5 h-3.5 text-teal-700" />
+                  Facility Photograph / Visual Asset
+                </label>
+                <span className="text-[10px] text-slate-500">Local SVG illustration or Web URL</span>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <div className="relative w-24 h-16 rounded-lg overflow-hidden border border-slate-300 bg-slate-200 flex-shrink-0 shadow-inner">
+                  <img
+                    src={
+                      formData.imageUrl ||
+                      CATEGORY_DEFAULT_IMAGES[formData.category] ||
+                      '/images/facilities/default-facility.svg'
+                    }
+                    alt="Preview"
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.target.src = '/images/facilities/default-facility.svg';
+                    }}
+                  />
+                </div>
+
+                <div className="flex-1 space-y-1.5 min-w-0">
+                  <input
+                    type="text"
+                    name="imageUrl"
+                    value={formData.imageUrl}
+                    onChange={handleChange}
+                    placeholder="/images/facilities/ghat-central.svg or https://..."
+                    className="w-full px-3 py-1.5 text-xs font-mono rounded-lg border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-teal-700"
+                  />
+                  <div className="flex flex-wrap gap-1 text-[10px]">
+                    <span className="text-slate-400 py-0.5">Presets:</span>
+                    {Object.entries(CATEGORY_DEFAULT_IMAGES).map(([cat, path]) => (
+                      <button
+                        key={cat}
+                        type="button"
+                        onClick={() => setFormData((prev) => ({ ...prev, imageUrl: path }))}
+                        className={`px-1.5 py-0.5 rounded border text-[10px] transition-colors cursor-pointer ${
+                          formData.imageUrl === path
+                            ? 'bg-teal-700 text-white border-teal-700'
+                            : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-100'
+                        }`}
+                      >
+                        {cat}
+                      </button>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
 

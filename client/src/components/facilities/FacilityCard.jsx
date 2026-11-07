@@ -19,6 +19,8 @@ import {
   formatCapacity,
   formatAccessibility,
   getFacilityCoordinates,
+  getFacilityImage,
+  CATEGORY_DEFAULT_IMAGES,
 } from '../../utils/formatters';
 
 export const FacilityCard = ({
@@ -43,16 +45,54 @@ export const FacilityCard = ({
 
   return (
     <div className="bg-white rounded-xl border border-slate-200 shadow-card hover:shadow-cardHover transition-all flex flex-col justify-between overflow-hidden group">
+      {/* Facility Photograph Banner */}
+      <div
+        className="relative h-44 w-full bg-slate-100 overflow-hidden cursor-pointer"
+        onClick={() => onSelectDetails && onSelectDetails(facility)}
+      >
+        <img
+          src={getFacilityImage(facility)}
+          alt={facility.name}
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          onError={(e) => {
+            const fallback =
+              CATEGORY_DEFAULT_IMAGES[facility?.category?.toUpperCase()] ||
+              '/images/facilities/default-facility.svg';
+            if (e.target.src !== fallback) {
+              e.target.src = fallback;
+            }
+          }}
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent pointer-events-none" />
+
+        {/* Floating Badges */}
+        <div className="absolute top-3 left-3 right-3 flex items-center justify-between gap-2 pointer-events-none">
+          <div className="pointer-events-auto">
+            <CategoryBadge category={facility.category} />
+          </div>
+          <div className="pointer-events-auto">
+            <StatusBadge status={facility.operationalStatus} />
+          </div>
+        </div>
+
+        {/* Bottom Bar on Image */}
+        <div className="absolute bottom-2 left-3 right-3 flex items-center justify-between text-white text-[11px] pointer-events-none">
+          <span className="font-semibold px-2 py-0.5 rounded bg-black/40 backdrop-blur-xs">
+            Pushkaralu 2027
+          </span>
+          {facility.distanceMeters !== undefined && (
+            <span className="font-bold bg-teal-800/90 text-white px-2 py-0.5 rounded backdrop-blur-xs border border-teal-500/30">
+              {formatDistance(facility.distanceMeters)} away
+            </span>
+          )}
+        </div>
+      </div>
+
       <div
         className="p-5 space-y-3 cursor-pointer"
         onClick={() => onSelectDetails && onSelectDetails(facility)}
       >
-        {/* Header badges */}
-        <div className="flex flex-wrap items-center justify-between gap-2">
-          <CategoryBadge category={facility.category} />
-          <StatusBadge status={facility.operationalStatus} />
-        </div>
-
         {/* Title */}
         <div>
           <h3 className="font-bold text-base text-slate-900 group-hover:text-teal-900 transition-colors">
